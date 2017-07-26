@@ -1,0 +1,1063 @@
+/**
+
+      @project  : ATC-Lab [engine]
+
+      @file     : $RCSfile: aircraftsprite.cpp,v $
+      @author   : $Author: Aaron Yeung $
+      @version  : $Name:  $ ( $Revision: 1.13.2.3 $ )
+      @date     : $Date: 2015/03/22 13:55:52 $
+      @state    : $State: Exp $
+
+      $Log: aircraftsprite.cpp,v $
+      Revision 1.13.2.3  2015/03/22 13:55:52  Aaron Yeung
+      - Added scriptable switch to enable/disable the ability to double click an aircraft and rotate it's details
+      - Added ability for nback task initial display and stimuli to be presented in subseconds
+      - Fixed bug in the instruction task that only prints every second instruction tasks textbox to the output CSV file
+
+      Revision 1.13.2.2  2015/02/23 13:34:41  Aaron Yeung
+      - Added logging of interruption tasks to the output .xml file. The output XML logging are described below:
+      	  *******************************************************************************************************************
+                XML Element				Description							Values
+                *******************************************************************************************************************
+      	  interruption_type 			Type of interruption						"Interruption" or "NBack"
+          	  start_time				Programmed start time of interruption
+      	  end_time				Programmed end time of interruption
+          	  show_full_screen			Whether the task was shown in full screen			0 = no, 1 = yes
+          	  external_program			Name of external program that was run
+          	  auto_accept				Whether aircraft were auto accepted during interruption		0 = no, 1 = yes
+          	  auto_handoff				Whether aircraft were auto handed off during interruption	0 = no, 1 = yes
+
+      	 - Added logging of interruption tasks to the output .csv file. The output fields are described below:
+      	  *******************************************************************************************************************
+                Field			Description							Values
+                *******************************************************************************************************************
+      	  Trial			Name of the trial that the interruption occurred in
+      	  Interruption Type	Type of interruption						"Interruption" or "NBack"
+          	  Start Time		Programmed start time of interruption
+      	  End Time		Programmed end time of interruption
+          	  Show Full Screen	Whether the task was shown in full screen			0 = no, 1 = yes
+          	  External Program	Name of external program that was run
+          	  Auto Accept		Whether aircraft were auto accepted during interruption		0 = no, 1 = yes
+          	  Auto Handoff		Whether aircraft were auto handed off during interruption	0 = no, 1 = yes
+
+      	 - Added additional field in the aircraft flash details section of the output .csv file called "Automatic" to indicate if an aircraft is
+      	   automatically accepted or handed off. Values are 0 (not automatic) or 1 (automatic acceptance/handoff)
+
+      	 - Added logging of reminder box dismiss button times to the output .xml file. The output XML logging are described below:
+      	  *******************************************************************************************************************
+                XML Element		Description								Values
+                *******************************************************************************************************************
+      	  reminder_box		Tag to indicate that the reminder box dismiss button was pressed	Aircraft callsign that had the dismiss button pressed
+      	  dismiss_button	Tag to indicate that the reminder box dismiss button was pressed	"pressed"
+      	  clicked_time		Millisecond time that the dismiss button was pressed
+
+      	- Added logging of reminder box dismiss button times to the output .csv file. The output fields are described below:
+      	  *******************************************************************************************************************
+                Field			Description								Values
+                *******************************************************************************************************************
+      	  Trial  		Name of the trial that the dismiss button was pressed
+      	  Callsign		Aircraft callsign that had the dismiss button pressed
+      	  Dismiss Time		Time in seconds into the trial that the dismiss button was pressed
+      	  Dismiss Time HP	Time in milliseconds into the trial that the dismiss button was pressed
+
+      	- Added calculation of Nback task results based on participant's inputs/non-inputs in the N back task. The are described as follows:
+      	  ***********************************************************************************************************************
+      	  Result		Description
+      	  ***********************************************************************************************************************
+      	  Hit			Participant correctly responds to a stimuli that was the same as the stimuli N times before
+      	  Miss			Participant fails to respond to a stimuli that was the same as the stimuli N times before
+      	  Correct rejection	Participant correct ignores the stimuli which is not the same as the stimulis N times before
+      	  False alarm		Paricipant incorrectly responds to a stimuli that was not the same as the stimuli N times before
+
+      	 - Added logging of N back task results to the output .xml file. The output XML logging are described below:
+      	  *******************************************************************************************************************
+                XML Element		Description								Values
+                *******************************************************************************************************************
+      	  NBackTask_response	Stimuli order of the stimuli that was presented
+      	  stimuli		The actual stimuli that was displayed to the participant
+      	  response		The result of the paritcipant's response				hit, miss, false_alarm, correct_rejection
+
+      	 - Added logging of N back task results to the output .csv file. The output fields are described below:
+      	  *******************************************************************************************************************
+                XML Element		Description								Values
+                *******************************************************************************************************************
+      	  Trial	  		Name of the trial that the N back response was generated in
+      	  Stimuli Number	Stimuli order of the stimuli that was presented
+      	  Stimuli		The actual stimuli that was displayed to the participant
+      	  Response		The result of the paritcipant's response				hit, miss, false_alarm, correct_rejection
+
+      	 - Added a count down timer for the blank interruption task. It can be enabled/disabled with the XML below:
+      	  *******************************************************************************************************************
+                XML Element		Attribute	Description							Values
+                *******************************************************************************************************************
+      	  atc:interruption	 atc:show_timer	Enable/disable countdown timer in the blank interruption task	'true' or 'false'
+
+      	  Example:
+      	  <atc:interruption atc:start='3' atc:end='21' atc:auto_handoff='true' atc:auto_accept='false' atc:show_blank_screen='true' atc:show_timer='true' atc:external_program='"calc.exe"'/>
+
+      	  - Added ability to enable/disable error pop up dialogs when a paricipant misses an aircraft acceptance or handoff.
+      	    This can be achieved with the XML below:
+      	  ***********************************************************************************************************************************************
+                XML Element	Attribute			Description									Values
+                ***********************************************************************************************************************************************
+      	  atc:trial	atc:notify_missed_acceptance	Enable/disable pop up error dialog when a paricipant misses an acceptance	'true' or 'false'
+      			atc:notify_missed_handoff	Enable/disable pop up error dialog when a paricipant misses a handoff		'true' or 'false'
+
+      	  Example:
+      	  <atc:trial atc:idx='test2' atc:param='default' atc:map="map1" atc:sky="script2" atc:ui="ui001" atc:notify_missed_acceptance='false' atc:notify_missed_handoff='false'>
+
+      Revision 1.13.2.1  2014/11/26 14:15:29  Aaron Yeung
+      Added ability to store the canvas view widget in aircraft sprite to pass onto the reminder box to allow the reminder box dismiss button to be displayed
+
+      Revision 1.13  2010/04/18 01:51:40  Aaron Yeung
+      Added functionality for the aircraft's proposed state to be scriptable to a different colour
+
+      Revision 1.12  2010/04/11 02:31:48  Aaron Yeung
+      Added reminder boxes that can be attached to aircraft. These reminder boxes move with the aircraft that they are attached to
+
+      Revision 1.11  2010/04/08 13:19:30  Aaron Yeung
+      Initial attempt at adding reminder box to individual aircraft
+
+      Revision 1.10  2008/07/12 19:44:34  Aaron Yeung
+      Added a pre handoff state to aircraft so that they flash blue when they exit the sector
+
+      Revision 1.9  2008/06/30 11:10:29  Aaron Yeung
+      Added flashing aircraft for handoff task
+
+      Revision 1.8  2008/05/13 17:00:32  Aaron Yeung
+      Added functionality to:
+
+      - Allow an aircraft's callsign to flash for an acceptance task
+      - Add a minimum time to enable an ok button on an instruction form
+      - Create reminder box
+
+      Revision 1.7  2007/07/26 10:22:05  Aaron Yeung
+      Disallowed acceptance of aircraft that are not in the proposed state
+
+      Revision 1.6  2007/07/10 13:47:41  Aaron Yeung
+      Added functionality to calculate aircraft conflicts
+
+      Revision 1.5  2007/07/09 08:36:36  Aaron Yeung
+      no message
+
+      Revision 1.4  2007/07/09 00:36:25  Aaron Yeung
+      renamed aircraft accepted state blink items to use the word flash instead
+
+      Revision 1.3  2007/07/08 17:05:53  Aaron Yeung
+      Modified to blink accept state items when in accepted state
+
+      Revision 1.2  2007/07/05 14:53:10  Aaron Yeung
+      Turned on the velocity probe by default
+      Moved the speed to be next to the callsign
+
+      Revision 1.1.1.2  2007/06/21 12:22:41  Aaron Yeung
+      no message
+
+      Revision 1.1.1.1  2007/06/09 13:12:11  Aaron Yeung
+      no message
+
+      Revision 1.28  2007/02/07 02:51:56  seth
+      1) fixed flashing aircraft to entering not exiting sector; 2) inhibited workload pop-up question; 3) implemented minute markers along short route probe
+
+      Revision 1.27  2006/11/07 03:05:44  seth
+      added additional logging
+
+      Revision 1.26  2006/10/18 03:58:33  seth
+      snap functionality for selection & fixed bug causing access violation once aircraft had reached destination
+
+      Revision 1.25  2006/10/17 12:23:30  seth
+      Altered selection priority (z) of ac-locator over actual sprite. Fixed requirement dialog to include distance
+
+      Revision 1.24  2006/09/24 00:28:03  seth
+      fixed vectoring and rerouting
+
+      Revision 1.23  2006/09/21 11:06:41  seth
+      implementing rerouting after vectoring - broken
+
+      Revision 1.22  2006/09/20 01:43:23  seth
+      fixed memory leaks
+
+      Revision 1.21  2006/09/16 10:02:55  seth
+      implemented controller states plus colours - still bug in vectored aircraft
+
+      Revision 1.20  2006/09/14 12:24:34  seth
+      reconciled aircraft tool class files
+
+      Revision 1.19  2006/09/14 07:28:06  seth
+      inital implementation of sector controller state
+
+      Revision 1.18  2006/09/13 10:16:16  seth
+      initial implemenation of vectoring functionality
+
+      Revision 1.17  2006/09/12 11:23:34  seth
+      initial implemtation of Range/Bearing tool
+
+      Revision 1.16  2006/09/12 05:43:43  seth
+      aircraft route tool working implementation
+
+      Revision 1.15  2006/09/11 06:13:44  seth
+      working on route tool
+
+      Revision 1.14  2006/09/07 06:46:21  seth
+      reimplementing tools - history and short route probe
+
+      Revision 1.13  2006/09/06 13:09:24  seth
+      refactoring translations into canvas
+
+      Revision 1.12  2006/09/06 06:22:23  seth
+      transformation problems
+
+      Revision 1.11  2006/08/31 06:15:11  seth
+      implemented clock
+
+      Revision 1.10  2006/08/29 08:44:56  seth
+      reimplementing mvc pattern
+
+      Revision 1.9  2006/08/28 06:21:48  seth
+      refactoring mvc
+
+      Revision 1.8  2006/08/27 13:01:19  seth
+      progress ....*.....
+
+      Revision 1.7  2006/08/24 04:12:51  seth
+      seperating model from visuals
+
+      Revision 1.6  2006/08/07 06:22:46  seth
+      implemtation of performance data
+
+      Revision 1.5  2006/07/19 08:39:18  seth
+      implementing aircraft agent
+
+      Revision 1.4  2006/06/15 03:58:57  seth
+      refactoring aircraft agents
+
+      Revision 1.3  2006/06/07 05:50:14  seth
+      refactor prior to implementation of performance data lookup
+
+
+      @email      : atc-support@psy.uq.edu.au
+      @copyright  : 2006 ARC Key Center for 
+                    Human Factors & Applied Cognitive Psycology
+
+**/
+
+#include "aircraftsprite.h"
+
+#include "aircraft_agent.h"
+#include "aircraft_data.h"
+#include "acsprite.h"
+#include "actools.h"
+#include "atc.h"
+#include "canvas.h"
+#include <qcanvas.h>
+#include <qregexp.h>
+#include <qtimer.h>
+#include <algorithm>
+
+using namespace atc;
+using std::make_pair;
+using std::string;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//
+//
+//
+//-----------------------------------------------------------------------------
+// construction/destruction
+//
+
+/*!
+ *
+ */
+AircraftSprite::AircraftSprite( Canvas *c, AircraftAgent *ac ) 
+	  : _aircraft( ac )
+	  , _canvas( c )
+	  , _sprite()
+	  , _locator( new ACLocator( c, this ) )
+	  , _callout( new ACCallOut( c, this ) )
+	  , _datablk( new ACDataBlk( c, this ) )
+	  , _callblk( new ACCallBlk( c, this ) )
+	  , _altblk ( new ACAltBlk( c, this ) )
+	  , _velblk ( new ACVelBlk( c, this ) )
+	  , _velvector( new ACProbeTool( c, this ) )
+	  , _history  ( new ACHistoryTool( c, this ) )
+	  , _route    ( new ACRouteTool( c, this ) )
+	  , _x( 0 ), _y( 0 )
+	  , _update( true )
+	  , _visible( false )
+	  , _colour( Qt::black )
+	  , _flash_timer( new QTimer( this ) )
+	  , _accept_state_flash_timer(new QTimer(this))
+	  , _blinkon( true )
+	  , _accept_state_blinkon(false)
+	  , _selected (false)
+	  , m_preHandoffStateBlinkOn(false)
+      , m_disableCalloutRotation(false)
+	  , m_reminderBox(NULL)
+      , m_canvasView(NULL)
+{
+	m_preHandoffStateFlashTimer = std::auto_ptr<QTimer>(new QTimer(this));
+
+	create_locator( );
+	create_callout( );
+	create_textblk( );
+	create_vector( );
+
+	build_outline( c );
+
+	set_call( _aircraft->callsign() );
+	set_data( _aircraft->type() );
+
+    connect( _flash_timer, SIGNAL( timeout() ), SLOT( blink() ) );
+	connect(_accept_state_flash_timer, SIGNAL(timeout()), SLOT(AcceptStateBlink()));
+	connect(m_preHandoffStateFlashTimer.get(), SIGNAL(timeout()), SLOT(PreHandoffStateBlink()));
+
+	connect( 
+			this,    SIGNAL( event_recorded( KeyValues& ) )
+		  , _canvas, SIGNAL( event_recorded( KeyValues& ) )
+	);
+
+	for (int i = 0; i < AIRCRAFT_DEFAULT_PROBE_LEVEL; i++)
+	{
+		_velvector->toggle();
+	}
+
+	ReminderBoxParams* params = ac->GetAircraftData()->m_reminderBoxParams.get();
+	if (params != NULL)
+	{
+		m_reminderBox = std::auto_ptr<ReminderBox>(new ReminderBox(_canvas, *params, ac->callsign()));
+        connect(m_reminderBox.get(),    SIGNAL(event_recorded(KeyValues&)), 
+                _canvas,                SIGNAL(event_recorded(KeyValues&)));
+	}
+}
+
+/*!
+ *
+ */
+AircraftSprite::~AircraftSprite() {
+	delete _route;
+	delete _history;
+	delete _velvector;
+	delete _accept_state_flash_timer;
+	delete _locator;
+	delete _callout;
+	delete _datablk;
+	delete _callblk;
+	delete _altblk;
+	delete _velblk;
+}
+
+
+//-----------------------------------------------------------------------------
+// [public] interface
+//
+
+/*!
+ *
+ */
+void AircraftSprite::update(long a_currentTime) {
+	if ( ! _update ) return;
+	if ( ! _aircraft->is_active() ) return;
+
+	set_alt( int(_aircraft->z()) / 100, int(_aircraft->calt()) / 100 );
+	set_vel( int(_aircraft->speed()) / 10 );
+	move_to( _aircraft->x(), _aircraft->y() );
+
+	_velvector->update();
+	_history->update();
+	_route->update();
+
+	set_colour(color_lookup());
+	set_flash( flash_lookup() );
+	SetAcceptModeFlash(_aircraft->control() == CS_ACCEPTED_TASK_INCOMPLETE);
+	SetPreHandoffModeFlash(_aircraft->control() == CS_PRE_HANDOFF);
+	set_visible( _aircraft->active() );
+
+	if (m_reminderBox.get())
+	{
+		if (a_currentTime != INVALID_VALUE)
+		{
+			m_reminderBox->UpdateSeconds(a_currentTime);
+			m_reminderBox->Move(_x, _y);
+		}
+	}
+
+	_canvas->update();
+}
+
+//-----------------------------------------------------------------------------
+// [public] interface
+//
+
+/*!
+ * Canvas co-ordinate position
+ */
+double AircraftSprite::cx() const { return _x; }
+double AircraftSprite::cy() const { return _y; }
+
+/*!
+ *
+ */
+double AircraftSprite::v() const { return _aircraft->speed(); }
+double AircraftSprite::a() const { return _aircraft->a(); }
+
+/*!
+ * @todo: use iterators
+ */
+const AircraftPath & AircraftSprite::path() const {
+	return _aircraft->path();
+}
+
+/*!
+ *
+ */
+const AircraftHistory & AircraftSprite::history() const {
+	return _aircraft->history();
+}
+
+//-----------------------------------------------------------------------------
+// [public] mutator interface
+//
+
+/*!
+ *
+ */
+void AircraftSprite::set_data( const char * data ){
+	_datablk->setText( QString( data ) );
+}
+
+/*!
+ *
+ */
+void AircraftSprite::set_call( const char * call ){
+	_callblk->setText( QString( call ) );
+}
+
+/*!
+ *
+ */
+void AircraftSprite::set_alt( double alt, double cfl ) {
+	int ialt = (int)( alt + ZERO_PT_FIVE );
+	int icfl = (int)( cfl + ZERO_PT_FIVE );
+	_altblk->setText( QString( "%1%2%3" )
+			.arg( alt )
+			.arg( alt < cfl ? "^" : alt > cfl ? "v" : ">" )
+			.arg( cfl )
+	);
+}
+
+/*!
+ *
+ */
+void AircraftSprite::set_alt( double altitude ){
+	double alt, cfl;
+	decode_altblk( alt, cfl );	// retrieve data from text
+	set_alt( altitude, cfl );
+}
+
+/*!
+ *
+ */
+void AircraftSprite::set_cfl( double cleared ){
+	double alt, cfl;
+	decode_altblk( alt, cfl );	// retrieve data from text
+	set_alt( alt, cleared );
+}
+
+/*!
+ *
+ */
+void AircraftSprite::set_vel( double velocity ){
+	_velblk->setText( QString("%1").arg( (int)( velocity + ZERO_PT_FIVE ) ) );
+}
+
+/*!
+ * Move the complex sprite.
+ */
+void AircraftSprite::move_to( const double x, const double y ) {
+	std::pair< double, double > pos = convert2canvas(  x,  y );
+
+	MoveBy move_by( pos.first - _x, pos.second - _y );
+	std::for_each( _sprite.begin(), _sprite.end(), move_by );
+
+	_x = pos.first;
+	_y = pos.second;
+}
+
+
+/*!
+ * Convert user measurement to canvas
+ */
+std::pair< double, double > AircraftSprite::convert2canvas( 
+		const double x, const double y 
+) const {
+	return _canvas->to_internal_point( x, y );
+}
+
+/*!
+ * Set the colour of complex sprite
+ */
+void AircraftSprite::set_colour( const QColor &paint ) {
+	//if ( paint == _colour) return;
+	_colour = paint;
+
+	std::for_each( _sprite.begin(), 
+					_sprite.end(), 
+					SetColour(paint, _aircraft->control(), _aircraft->FlashParams()) );
+}
+
+/*!
+ * Set the visible state of complex sprite
+ */
+void AircraftSprite::set_visible( bool status ) {
+	if ( status == _visible ) return;
+	_visible = status;
+	std::for_each( _sprite.begin(), _sprite.end(), SetVisible( status ) );
+
+	if ( !_visible ) {
+		_history->set_visible( false );
+		_route->set_active( false );
+		_velvector->setVisible( false );
+	}
+}
+
+/*!
+ *
+ */
+void AircraftSprite::set_flash( bool flash ) {
+	if ( flash )
+		_flash_timer->start( ACSPRITE_BLINK_PERIOD );
+	else
+		_flash_timer->stop();
+}
+
+void
+AircraftSprite::SetCanvasView(CanvasView* a_canvasView)
+{
+    m_canvasView = a_canvasView;
+
+    if (m_reminderBox.get())
+    {
+        m_reminderBox->SetCanvasView(a_canvasView);
+    }
+}
+
+void AircraftSprite::SetAcceptModeFlash(bool flash)
+{
+	if (flash)
+	{
+		_accept_state_flash_timer->start(ACSPRITE_BLINK_PERIOD);
+	}
+	else
+	{
+		_accept_state_flash_timer->stop();
+	}
+}
+
+void
+AircraftSprite::SetPreHandoffModeFlash(bool a_flash)
+{
+	if (a_flash)
+	{
+		m_preHandoffStateFlashTimer->start(ACSPRITE_BLINK_PERIOD);
+	}
+	else
+	{
+		m_preHandoffStateFlashTimer->stop();
+	}
+}
+
+void
+AircraftSprite::SetDisableCalloutRotation(bool a_disable)
+{
+    m_disableCalloutRotation = a_disable;
+}
+
+/*!
+ *
+ */
+void AircraftSprite::rotate_callout() {
+    if (!m_disableCalloutRotation)
+    {
+	    // current points
+	    QPoint p1( _callout->startPoint() );
+	    QPoint p2( _callout->endPoint() );
+
+	    int delta = 2 * AIRCRAFT_SPRITE_CALLOUT;
+	    int fact = p1.x() > 0 ? -1 : 1;
+	    QFontMetrics fm( _callblk->font() );
+
+	    if (
+			    ( p1.x() < 0 && p1.y() < 0 ) 
+		     || ( p1.x() > 0 && p1.y() > 0 )
+	    ){
+		    _callout->setPoints( p1.x(), -p1.y(), p2.x(), -p2.y() );
+		    
+		    int d = fact * ( delta - 3 * fm.lineSpacing() );
+		    _callblk->moveBy(0, d);
+		    _datablk->moveBy(0, d);
+		    _altblk->moveBy(0, d);
+		    _velblk->moveBy(0, d);
+	    }
+	    else {
+		    _callout->setPoints( -p1.x(), p1.y(), -p2.x(), p2.y() );
+
+		    _callblk->moveBy(fact * (delta + _callblk->boundingRect().width()), 0);
+		    _datablk->moveBy(fact * (delta + _datablk->boundingRect().width()), 0);
+		    _altblk->moveBy(
+			    fact * (
+					    delta 
+				      + 8 * fm.charWidth("0", 0) 
+				      + _velblk->boundingRect().width()
+			    ), 
+			    0
+		    );
+		    _velblk->moveBy(
+			    fact * (
+					    delta 
+				      + 8 * fm.charWidth("0", 0) 
+				      + _velblk->boundingRect().width()
+			    ), 
+			    0
+		    );
+	    }
+
+	    _canvas->update();
+
+	    KeyValues kvs;
+	    kvs.push_back( make_pair( string( "action" ), string( "rotate_callout" ) ) );
+	    kvs.push_back( make_pair( string( "callsign" ), to_string( _aircraft->callsign() ) ) );
+	    emit event_recorded( kvs );
+    }
+}
+
+/*!
+ * Toggle ON/OFF route information
+ */
+void AircraftSprite::toggle_route() {
+	_route->toggle();
+
+	KeyValues kvs;
+	kvs.push_back( make_pair( string( "tool" ), string( "route" ) ) );
+	kvs.push_back( make_pair( string( "active" ), to_string( _route->is_active() ) ) );
+	kvs.push_back( make_pair( string( "callsign" ), to_string( _aircraft->callsign() ) ) );
+	emit event_recorded( kvs );
+
+}
+
+/*!
+ * Toggle ON/OFF history points
+ */
+void AircraftSprite::toggle_history() {
+	_history->toggle();
+
+	KeyValues kvs;
+	kvs.push_back( make_pair( string( "tool" ), string( "history" ) ) );
+	kvs.push_back( make_pair( string( "active" ), to_string( _history->is_visible() ) ) );
+	kvs.push_back( make_pair( string( "callsign" ), to_string( _aircraft->callsign() ) ) );
+	emit event_recorded( kvs );
+}
+
+/*!
+ * Toggle ON/OFF short route probe
+ */
+void AircraftSprite::toggle_probe() {
+	_velvector->toggle();
+
+	KeyValues kvs;
+	kvs.push_back( make_pair( string( "tool" ), string( "short_route_probe" ) ) );
+	kvs.push_back( make_pair( string( "value" ), to_string( _velvector->value() ) ) );
+	kvs.push_back( make_pair( string( "callsign" ), to_string( _aircraft->callsign() ) ) );
+	emit event_recorded( kvs );
+}
+
+void 
+AircraftSprite::DisableReminderBox()
+{
+	if (m_reminderBox.get() != NULL)
+	{
+		m_reminderBox->Disable();
+	}
+}
+
+/*!
+ * 
+ */
+void AircraftSprite::vector( double x, double y ){
+	Point p( _canvas->to_user_point( x, y ) );
+	_aircraft->vector( p.first, p.second );
+}
+
+/*!
+ * 
+ */
+int AircraftSprite::accept() { 
+	int accepted = _aircraft->accept();  
+	update();
+
+	return accepted;
+}
+
+/*!
+ * 
+ */
+int 
+AircraftSprite::handoff()
+{
+	int ret = _aircraft->handoff(); 
+	update();
+
+	return ret;
+}
+
+//-----------------------------------------------------------------------------
+// [public] interaction
+//
+
+/*!
+ *
+ */
+bool AircraftSprite::locator_selected( const QPoint &pt ) const {
+	return QRegion( _locator->boundingRect() ).contains( pt );
+}
+
+/*!
+ *
+ */
+void AircraftSprite::reroute( const AircraftPathToken *t, const Point &p ) {
+	_aircraft->reroute( t, p );
+}
+
+//-----------------------------------------------------------------------------
+// [public] slots
+//
+
+/*!
+ *
+ */
+void AircraftSprite::next_waypoint() { /*_route->next();*/ }
+
+/*!
+ *
+ */
+void AircraftSprite::destroy() {
+	_route->set_active( false );
+	_history->set_visible( false );
+	_velvector->deactivate();
+	set_visible( false );
+}
+
+
+//-----------------------------------------------------------------------------
+// [private] initialization
+//
+
+/*!
+ *
+ */
+void AircraftSprite::create_locator( ) {
+	_locator->setBrush( AIRCRAFT_SPRITE_DEFAULT_BRUSH );
+	_locator->setSize( AIRCRAFT_SPRITE_DIAMETER, AIRCRAFT_SPRITE_DIAMETER );
+	add2sprite( _locator );
+	_locator->setZ( AIRCRAFT_LOCATOR_LAYER );	// reset layer to higher precedence
+	_locator->show();
+}
+
+/*!
+ *
+ */
+void AircraftSprite::create_callout( ) {
+	_callout->setPoints(
+		  AIRCRAFT_SPRITE_DIAMETER / 2, -AIRCRAFT_SPRITE_DIAMETER / 2
+		, AIRCRAFT_SPRITE_CALLOUT, -AIRCRAFT_SPRITE_CALLOUT
+	);
+	add2sprite( _callout );
+}
+
+/*!
+ *
+ */
+void AircraftSprite::create_textblk( ) {
+	init_textblk( _callblk, 0, 0 );
+	init_textblk( _datablk, 1, 0 );
+	init_textblk( _altblk,  2, 0 );
+	init_textblk( _velblk,  0, 5 );
+} 
+
+/*!
+ *
+ */
+void AircraftSprite::init_textblk( QCanvasText *txt, int line, int column ) {
+	txt->setFont( AIRCRAFT_SPRITE_FONT );
+
+	QFontMetrics fmtx( txt->font() );
+	txt->setText( EMPTY_STRING );
+	txt->moveBy( 
+			 AIRCRAFT_SPRITE_CALLOUT + column * fmtx.charWidth( "0", 0 )
+		  , -AIRCRAFT_SPRITE_CALLOUT +   line * fmtx.lineSpacing() 
+	);
+	add2sprite( txt );
+}
+
+/*!
+ * Create Short Route Probe/Velocity Vector
+ */
+void AircraftSprite::create_vector( ) {
+	add2sprite( _velvector );
+}
+
+/*!
+ *
+ */
+void AircraftSprite::build_outline( QCanvas *canvas ) {
+	QPointArray pts;
+	pts.makeEllipse( 
+		0, 0, AIRCRAFT_SPRITE_DIAMETER, AIRCRAFT_SPRITE_DIAMETER 
+	);
+	QPoint p1( pts.at( pts.size() - 1 ) );
+	for ( int i = 0; i < pts.size(); ++i ) {
+		QPoint p2( pts[i] );
+		QCanvasLine *cl = new QCanvasLine( canvas );
+		cl->setPoints( p1.x(), p1.y(), p2.x(), p2.y() );
+		cl->moveBy(
+			-AIRCRAFT_SPRITE_DIAMETER / 2, -AIRCRAFT_SPRITE_DIAMETER / 2
+		);
+		add2sprite( cl );
+		p1 = p2;
+	}
+}
+
+/*! 
+ * Collect together canvas items that make up complex sprite.
+ */
+void AircraftSprite::add2sprite( QCanvasItem *item ) {
+	item->setZ( AIRCRAFT_SPRITE_LAYER );
+	_sprite.push_back( item );
+}
+
+//-----------------------------------------------------------------------------
+// [private] utility
+//
+
+/*!
+ *
+ */
+QColor AircraftSprite::color_lookup() const {
+	if (!_aircraft->InConflict())
+	{
+		switch ( _aircraft->control() ) {
+		case CS_NONE :						return CS_NONE_COLOUR;
+		case CS_ANNOUNCED:					return CS_ANNOUNCED_COLOUR;
+		case CS_PROPOSED:					return _aircraft->FlashParams().flash_colour;//CS_PROPOSED_COLOUR;
+		case CS_ACCEPTED_TASK_INCOMPLETE:	return CS_ACCEPTED_COLOUR;
+		case CS_ACCEPTED_TASK_COMPLETE:		return CS_ACCEPTED_COLOUR;
+		case CS_OVEROUT:					return CS_OVEROUT_COLOUR;
+		case CS_PRE_HANDOFF:				return CS_PRE_HANDOFF_COLOUR;
+		case CS_HANDOFF:					return CS_HANDOFF_COLOUR;
+		case CS_NOMORE:
+		default:							return CS_NOMORE_COLOUR;
+		}
+	}
+	else
+	{
+		return AIRCRAFT_CONFLICT_COLOR;
+	}
+}
+
+/*!
+ *
+ */
+bool AircraftSprite::flash_lookup() const {
+	return CS_PROPOSED == _aircraft->control();
+}
+
+/*!
+ *
+ */
+void AircraftSprite::decode_altblk( double &alt, double &cfl ) {
+	QRegExp rx( "^\\d?\\d$" );
+	rx.search( _altblk->text() );
+	alt = rx.cap( 1 ).toDouble();
+	cfl = rx.cap( 2 ).toDouble();
+}
+
+//-----------------------------------------------------------------------------
+// [private slots]
+//
+
+/*!
+ *
+ */
+void AircraftSprite::blink() {
+	std::for_each( 
+			_sprite.begin(), _sprite.end()
+		  , SetColour( _blinkon ? _colour : ACSPRITE_BLINK_OFF_COLOUR, 
+						_aircraft->control(),
+						_aircraft->FlashParams()) 
+	);
+	_blinkon = !_blinkon;
+	_canvas->update();
+}
+
+void AircraftSprite::AcceptStateBlink() {
+	if (_aircraft->control() == CS_ACCEPTED_TASK_INCOMPLETE)
+	{
+		std::for_each( 
+				_sprite.begin(), _sprite.end()
+			, SetAcceptedStateColour( _accept_state_blinkon ? 
+										_aircraft->FlashParams().flash_colour : ACSPRITE_BLINK_OFF_COLOUR,
+										_aircraft->FlashParams()));
+		_accept_state_blinkon = !_accept_state_blinkon;
+		_canvas->update();
+	}
+}
+
+void
+AircraftSprite::PreHandoffStateBlink()
+{
+	if (_aircraft->control() == CS_PRE_HANDOFF)
+	{
+		std::for_each(_sprite.begin(), _sprite.end(), SetPreHandoffStateColour(m_preHandoffStateBlinkOn ?
+																				CS_PRE_HANDOFF_COLOUR : ACSPRITE_PRE_HANDOFF_BLINK_OFF_COLOUR));
+		m_preHandoffStateBlinkOn = !m_preHandoffStateBlinkOn;
+		_canvas->update();
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// atc::AircraftSprite::MoveBy functor
+//
+//------------------------------------------------------------------------------
+// [public]
+//
+
+/*!
+ *
+ */
+void AircraftSprite::MoveBy::operator ()( QCanvasItem *item ) const { 
+	item->moveBy( _dx, _dy );
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// atc::AircraftSprite::SetColour functor
+//
+//------------------------------------------------------------------------------
+// [public]
+//
+
+/*!
+ *
+ */
+void AircraftSprite::SetColour::operator ()( QCanvasItem *item ) const{
+	switch ( item->rtti() ) {
+	
+	case CanvasItem::RTTI_DATABLK :
+	case CanvasItem::RTTI_CALLBLK :
+	case CanvasItem::RTTI_ALTBLK  :
+	case CanvasItem::RTTI_VELBLK  :
+	case QCanvasItem::Rtti_Text :
+		dynamic_cast< QCanvasText * >(item)->setColor( _colour );
+		break;
+	case QCanvasItem::Rtti_Sprite :
+		// do nothing
+		break;
+	default : { // QCanvasPolygonalItem
+		QCanvasPolygonalItem *i = dynamic_cast< QCanvasPolygonalItem * >(item);
+		QPen p = i->pen();
+		p.setColor( _colour );
+		i->setPen( p );
+		QBrush b = i->brush();
+		b.setColor(_colour);
+		i->setBrush(b);
+//		dynamic_cast< QCanvasPolygonalItem * >(item)->setPen( _colour );
+	}
+	
+	}
+
+	bool set_color = false;
+
+	switch (_state)
+	{
+	case CS_ACCEPTED_TASK_INCOMPLETE:
+		set_color = ((_blink_params.flash_item == FLASH_ITEM_SI) && (item->rtti() == CanvasItem::RTTI_VELBLK)) ||
+							((_blink_params.flash_item == FLASH_ITEM_FL) && (item->rtti() == CanvasItem::RTTI_ALTBLK)) ||
+							((_blink_params.flash_item == FLASH_ITEM_CS) &&	(item->rtti() == CanvasItem::RTTI_CALLBLK));
+
+		if (set_color)
+		{
+			dynamic_cast<QCanvasText*>(item)->setColor(_blink_params.flash_colour);
+		}
+		break;
+	default:
+		break;
+	}
+}
+
+void AircraftSprite::SetAcceptedStateColour::operator ()( QCanvasItem *item ) const{
+	bool set_color = ((_blink_params.flash_item == FLASH_ITEM_SI) && (item->rtti() == CanvasItem::RTTI_VELBLK)) ||	
+						((_blink_params.flash_item == FLASH_ITEM_FL) && (item->rtti() == CanvasItem::RTTI_ALTBLK)) ||
+						((_blink_params.flash_item == FLASH_ITEM_CS) && (item->rtti() == CanvasItem::RTTI_CALLBLK));
+
+	if (set_color)
+	{
+		dynamic_cast< QCanvasText * >(item)->setColor(_colour);
+	}
+}
+
+void 
+AircraftSprite::SetPreHandoffStateColour::operator () (QCanvasItem* a_item) const
+{
+	switch (a_item->rtti()) 
+	{
+	case CanvasItem::RTTI_DATABLK :
+	case CanvasItem::RTTI_CALLBLK :
+	case CanvasItem::RTTI_ALTBLK  :
+	case CanvasItem::RTTI_VELBLK  :
+	case QCanvasItem::Rtti_Text :
+		dynamic_cast<QCanvasText*>(a_item)->setColor(_colour);
+		break;
+	case QCanvasItem::Rtti_Sprite :
+		// do nothing
+		break;
+	default :  // QCanvasPolygonalItem
+		QCanvasPolygonalItem *i = dynamic_cast<QCanvasPolygonalItem*>(a_item);
+		QPen p = i->pen();
+		p.setColor(_colour);
+		i->setPen( p );
+		QBrush b = i->brush();
+		b.setColor(_colour);
+		i->setBrush(b);
+		break;
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// atc::AircraftSprite::SetVisible functor
+//
+//------------------------------------------------------------------------------
+// [public]
+//
+
+/*!
+ *
+ */
+void AircraftSprite::SetVisible::operator ()( QCanvasItem *item ) const{ 
+	item->setVisible( _status ); 
+}
+
+void 
+AircraftSprite::select(bool a_select)
+{
+	_selected = a_select;
+
+	QBrush brush = _selected ? AIRCRAFT_SPRITE_SELECTED_BRUSH:AIRCRAFT_SPRITE_DEFAULT_BRUSH;
+	brush.setColor(_colour);
+	_locator->setBrush(brush);
+}
+///////////////////////////////////////////////////////////////////////////////
