@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+   <meta content="en-au" http-equiv="Content-Language" />
+   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+   <title>En Route Air Traffic Control Sim</title> 
+   <link href="styles.css" rel="stylesheet" type="text/css" />
+   <link href="checkbox.css" rel="stylesheet" type="text/css" />
+   <script type="text/javascript">
+
+$("checkbox1").change(function(){
+    $("textInput").val($(this).val());
+});
+$("checkbox2").change(function(){
+    $("textInput2").val($(this).val());
+});
+$("checkbox2").change(function(){
+    $("textInput3").val($(this).val());
+});
+   </script> 
+   <style type="text/css">
+.auto-style1 {
+   margin: 0.83em 5% 0.83em 5%;
+   display: block;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   font-size: 26px;
+   text-align: left;
+}
+.newStyle1 {
+   font-size: 31px;
+   text-align: left;
+   vertical-align: top;
+}
+
+.auto-style2 {
+   vertical-align: text-bottom;
+   border-width: 0px;
+}
+   </style> 
+</head>
+<body style="margin: 0; background-color: #D3D3D3">
+<div class="backgroundmid"> 
+   <h1 class="head1">Conflict Detection</h1> 
+   <h1 class="title"><u>1. What is a conflict?</u></h1> 
+
+   <p class="desctext">A conflict occurs if two aircraft are on course to violate both
+   horizontal and vertical separation standards at some point in the
+   future. Put simply, your job is to detect if two aircraft will come too
+   close together in the future, and then to prevent them from
+   potentially crashing.</p> 
+
+   <p class="desctext">For this experiment you will use the real Australian
+   en route ATC standards: a conflict occurs when two aircraft will be
+   separated by <strong>less than</strong> 1000 ft in altitude and by 
+   <strong>less than</strong> 5 nautical miles horizontally, at some point
+   in the future. </p>
+
+   <p class="desctext">The image below illustrates the minimal separation
+   requirements you must maintain. If two aircraft are within 1000ft of
+   each other vertically; then they must not come within 5 nautical miles
+   of each other horizontally.</p> 
+
+   <p class="desctext">
+   <img alt="" class="figure" height="281" src="images/seperationdiagram.jpg"
+        width="300" /></p> </p>
+   <br /><br /> 
+   <h1 class="title"><u>2. How do I detect them?</u></h1> 
+
+   <p class="desctext">You will need to scan the screen for aircraft which
+   you believe will come too close together in altitude and horizontal
+   distance.</p> 
+   <h2 class="subtitle">2.1 Judging Altitude:</h2> 
+
+   <p class="desctext">Altitude is how high an aircraft is flying,
+   typically represented in feet (ft). In this experiment, aircraft
+   altitudes will be rounded to the nearest 100 ft. interval. For
+   example, 31,500 ft is represented as <span class="auto-aircraft">315</span>.
+   
+   <br /> 
+   <br /> This rounding makes your job easier as you only need to determine
+   whether the difference between two altitudes is less than 
+   <span class="auto-aircraft">10</span>. For instance, in the image below
+   the difference between the altitudes <span class="auto-aircraft">315</span>
+   and <span class="auto-aircraft">320</span> is <span class="auto-aircraft">5</span>
+   and therefore this aircraft pair are in conflict. 
+   <br /><br /> Note that if two aircraft are separated by 1000 feet
+   exactly then they are not in conflict. For example,
+   if the altitude of <span class="auto-aircraft">HD84</span> (below) was 
+   <span class="auto-aircraft">310</span> then it would not be in conflict
+   with <span class="auto-aircraft">ZB30</span> which is at 
+   <span class="auto-aircraft">320</span>.</p> 
+
+   <p class="desctext">
+   <img alt="" class="figure" src="images/conflict_examplealt.png" /></p> 
+   <h2 class="subtitle">2.2 Judging Horizontal Distance</h2> 
+
+   <p class="desctext"> If two aircraft are on the same altitude, you need to determine whether they will come within 5 nautical miles of each other horizontally as well (remember the definition of a conflict?). To help you judge horizontal distance, you will have
+   a yellow marker on the left of your screen which shows you what 5
+   nautical miles looks. </p>
+   <img class="figure" height="256" src="images/5nm.png" width="594" /> 
+   <br /></p> 
+   <br /><br /> 
+   <h1 class="title"><u>3. Test your knowledge</u></h1> 
+
+   <p class="desctext">Decide for each image if you think there is a
+   conflict or not, then check your answer. If you are still unsure why you
+   were incorrect, ask the experimenter.</p> 
+   <div class="desctext"> 
+      <table style="width: 70%;">
+         <tr>
+            <td style="width: 338px"> 
+               <img alt="" height="175" src="images/confA.png"
+                    style="float: right" width="336" /> 
+            </td>
+            <td style="width: 100px"> 
+               <form>
+               <input class="css-checkbox" id="checkbox1"
+                      onclick="this.form.ta.value=this.checked? 'A is a conflict, the flights are only 300ft apart and flying into each other.':''; "
+                      type="checkbox" /> 
+               <label class="css-label" for="checkbox1">Check</label> 
+            </td>
+            <td> 
+<textarea cols="20" disabled id="textInput" name="ta" rows="1"
+          style="border-style: solid; border-color: inherit; border-width: thin; width: 300px; height: 60px;">
+		</textarea>
+               </form>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 338px"><img alt="" height="175"
+                                          src="images/confB.png"
+                                          style="float: right" width="336" /></td>
+            <td style="width: 100px"> 
+               <form>
+               <input class="css-checkbox" id="checkbox2"
+                      onclick="this.form.ta.value=this.checked? 'B is not a conflict, the flights are exactly 1000ft apart which is not a conflict':''; "
+                      type="checkbox" /> 
+               <label class="css-label" for="checkbox2">Check</label></td>
+            <td> 
+<textarea cols="20" disabled id="textInput2" name="ta" rows="1"
+          style="border-style: solid; border-color: inherit; border-width: thin; width: 300px; height: 60px;"></textarea>
+               </form>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 338px"><img alt="" height="175"
+                                          src="images/confC.png"
+                                          style="float: right" width="336" /></td>
+            <td style="width: 100px"> 
+               <form>
+               <input class="css-checkbox" id="checkbox3"
+                      onclick="this.form.ta.value=this.checked? 'C is not a conflict, the flights are 7000ft apart':''; "
+                      type="checkbox" /> 
+               <label class="css-label" for="checkbox3">Check</label></td>
+            <td> 
+<textarea cols="20" disabled id="textInput3" name="ta" rows="1"
+          style="border-style: solid; border-color: inherit; border-width: thin; width: 300px; height: 60px;"></textarea>
+               </form>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 338px"><img alt="" height="175"
+                                          src="images/confD.png"
+                                          style="float: right" width="336" /></td>
+            <td style="width: 100px"> 
+               <form>
+               <input class="css-checkbox" id="checkbox4"
+                      onclick="this.form.ta.value=this.checked? 'D is not a conflict. Although the flights are on the same altitude, they are travelling away from each other. Thus, they do not also violate horizontal separation requirements.':''; "
+                      type="checkbox" /> 
+               <label class="css-label" for="checkbox4">Check</label></td>
+            <td> 
+<textarea cols="20" disabled id="textInput4" name="ta" rows="1"
+          style="border-style: solid; border-color: inherit; border-width: thin; width: 300px; height: 80px;"></textarea>
+               </form>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 338px"><img alt="" height="175"
+                                          src="images/confE.png"
+                                          style="float: right" width="336" /></td>
+            <td style="width: 100px"> 
+               <form>
+               <input class="css-checkbox" id="checkbox5"
+                      onclick="this.form.ta.value=this.checked? 'E is a conflict. The two flights are only 700ft apart.':''; "
+                      type="checkbox" /> 
+               <label class="css-label" for="checkbox5">Check</label></td>
+            <td> 
+<textarea cols="20" disabled id="textInput5" name="ta" rows="1"
+          style="border-style: solid; border-color: inherit; border-width: thin; width: 300px; height: 80px;"></textarea>
+               </form>
+            </td>
+         </tr>		 
+      </table>
+   </div>
+   <br /><br /> 
+   <br /> 
+   <h1 class="title"><u>4. Violating minimum separation</u></h1> 
+
+   <p class="desctext">If two aircraft in conflict violate minimum separation, they
+   will turn yellow. If they have turned yellow, it is too late to resolve
+   the conflict and you will lose more points if you try to. It is your job
+   to <strong>prevent</strong> the aircraft from turning yellow. </p>
+
+   <p class="figure">In this example, the two aircraft are travelling only
+   500 ft apart. Notice that when they come within 5 nautical miles of each other they then
+   violate minimum separation and turn yellow. <br /> 
+   <img class="figure" src="images/conflict2.gif" /> 
+   <br /> 
+   <br /> </p>
+   <h1 class="auto-style1"><u>5. Resolving Conflicts</u></h1> 
+
+   <p class="desctext">If you believe two aircraft are in conflict, you
+   need to resolve it by changing the altitude of 
+   <span style="font-weight:bold;">one</span> of the aircraft. To change
+   the altitude: </p>
+   <ul class="infobullets">
+      <li>Click the altitude indicator text in the information box (i.e. 
+      <img class="auto-style2" src="images/numbers.png" /> ). This will
+      bring up a menu listing the altitudes which the aircraft can change
+      to. </li>
+      <li>Select a new <strong>safe</strong> altitude by double clicking on
+      a value of your choice. You can also click then press enter to select
+      a value if you prefer.</li> 
+   </ul>
+
+   <p class="figure">
+   <img alt="" height="280" src="images/clickchange.gif" width="456" /></p> 
+   <div class="button"> 
+      <br /> 
+
+      <p class="desctext">It is important to be aware of the following:</p> 
+      <ul class="infobullets2">
+	  <li>It takes some time for aircraft to climb or descend to a new altitude. Therefore, if you resolve a conflict but the aircraft did not have enough time to clear 900ft, it will still turn yellow. 
+	  If this happens, the yellow colour change is just a warning. You will still receive points for the detection of the conflict. </li>
+	   <li>If you open the altitude change menu by accident press escape 
+         <img alt="" class="auto-style2" src="images/esc-key.jpg" /> to
+         close it.</li><br/>
+         <li>Ensure the value you select will actually resolve the
+         conflict. In the example above, if aircraft 
+         <span class="auto-aircraft">ZF54</span> was cruising at <span class="auto-aircraft">405</span>
+         , then changing the altitude of  <span class="auto-aircraft">GY58</span> to <span class="auto-aircraft">410</span> by clicking <span style='font-family:courier'>[41000]</span> in the menu  
+          would not resolve the conflict.</li> <br/>
+         <li>You cannot open the altitude menu unless the aircraft is
+         under your control (green).</li> <br/>
+         <li>There is a penalty for changing the altitude of an aircraft
+         not in conflict.</li> 
+         
+      </ul>
+      <br /> 
+      <br /> 
+      <hr style="width: 50%" /> 
+      <input class="button" onclick="location.href='accept.html';"
+             type="button" value="Go Back" /> 
+      <input class="button" onclick="location.href='disrupt.html';"
+             type="button" value="Continue (ONLY if you understand conflicts)" /> 
+      <hr style="width: 50%" /> 
+   </div>
+</div>
+</body>
+</html> 

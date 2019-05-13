@@ -1,0 +1,162 @@
+*******************
+Version 
+*******************
+2.4.5.4
+
+*******************
+Release Date
+*******************
+Thursday 27th November 2014
+
+*******************
+Developers
+*******************
+Aaron Yeung
+
+*******************
+CVS Branch
+*******************
+atclab-rel-2_4_5_branch
+
+*******************
+CVS Tag
+*******************
+atclab-rel-2_4_5_4
+
+*******************
+Notes:
+*******************
+2.4.5.4   - Implemented a scriptable dismiss button for aircraft reminder boxes.
+
+          *******************************************************************************************************************
+          XML Element                 Description   Attributes  Description
+          *******************************************************************************************************************
+	  atc:dismissButton
+          
+            					    enable_time Time in the simulation to enable the dismiss button
+            					    label       The text to display on the dismiss button
+            					    fontSize	The font size of the text to be displayed on the dismiss button
+            					    width	The width of the dismiss button in pixels
+            					    height	The height of the dismiss button in pixels
+            					    posX	The horizontal distance from the centre of the aircraft to the top left corner of the dismiss button in pixels
+            					    posY	The vertical distance from the centre of the aircraft to the top left corner of the dismiss button in pixels
+
+	  Example:
+	  <atc:reminderBox atc:bgColor="darkOrange" atc:width='380' atc:height='70' atc:aircraft='C69' atc:posX='10' 
+		atc:posY='10' atc:displayText="This is just a test"  atc:displayTextSize='20'>
+		<atc:displayTime atc:startTime='0' atc:endTime='600'/>
+		<atc:flashColor>darkOrange</atc:flashColor>
+		<atc:flashColor>darkOrange</atc:flashColor>
+		<atc:flashTime atc:startTime='15' atc:endTime='600'/>
+            	<atc:dismissButton atc:enable_time='10' atc:label="Multiple reminderboxes" atc:fontSize='10' atc:width='120' atc:height='30' atc:posX='20' atc:posY='70'/>
+	  </atc:reminderBox>
+
+2.4.5.3	  - Implemented scriptable sound file for trial tasks which allow a .wav file to be played while the trial is
+	    running.
+
+	  *******************************************************************************************************************
+          XML Element                 Value	Description   
+          *******************************************************************************************************************
+          atc:sound                   [String]	The full path to sound file in .wav format to be played for the
+  				                trial. Note, the sound file will be stopped if its duration is longer than
+					        the trial duration.
+
+          Example:
+          <atc:trial atc:idx='test1' atc:param='default' atc:map="map1" atc:sky="scriptt1" atc:ui="ui001" atc:sound="C:\Documents and Settings\Aaron Yeung\My Documents\Key Centre For Human Factors\Work\Source\atc_lab\Debug\incorrect.wav">
+              <atc:timeEvent>300</atc:timeEvent>
+          </atc:trial>
+
+2.4.5.2	  - Implemented scriptable update_rate and update_multiplier for the engine clock.
+	  *******************************************************************************************************************
+          XML Element                 Value	Description   
+          *******************************************************************************************************************
+          update_rate                 [Integer]	The rate (in ms) that the clock should update
+	  update_multiplier	      [Integer]	The multiples the clock should count in. E.g. a value of 2
+				    	        means the clock will update in multples of 2 (Twice as fast)
+
+          Example:
+          <atc:param atc:idx='default'>
+      		<atc:sectorEntryDistance>5</atc:sectorEntryDistance>
+      		<atc:sectorExitDistance>0</atc:sectorExitDistance>
+      		<atc:update_rate>1000</atc:update_rate>
+      		<atc:update_multiplier>2</atc:update_multiplier>
+      		<atc:horizontal_doms>5</atc:horizontal_doms>
+      		<atc:vertical_doms>0</atc:vertical_doms>
+    	  </atc:param>
+
+2.4.5.1   - Branched off from version 2.4.5
+            Added millisecond timer using the hosts high performance counter (if it exists). Timing in the resulting log file            is encased in the <hpc_elapsed_time> XML tag. Also added millisecond fields in the CSV log file.
+
+2.4.5     - Added XML sub-element to acceptedStateFlashParams element called flashColour. This was used instead of
+            the equivalent element 'colour' for acceptedStateFlashParams because Shayne had many scripts with 
+            <acceptedStateFlashParams><colour>red</colour></acceptedStateFlashParams> but did not want those aircrafts
+            to be red. So had to add a new element so that only the few aircrafts that need to flash red would be
+            shown as red. The aircrafts with <colour>red</colour> would be ignored and default to flash orange
+
+2.4.4     - Removed functionality added in v2.4.3 where an experimenter could change the flash colour to be red when an
+            aircraft is in a proposed state.
+
+          - Removed XML script elements
+          *******************************************************************************************************************
+          XML Element                 Description   Attributes  Description
+          *******************************************************************************************************************
+          <acceptedStateFlashParams>                colour      The colour an aircraft is to flash when in the proposed
+                                                                state ready to be accepted. (Orange by default)
+          Example:
+          <atc:acceptedStateFlashParams>
+            <atc:colour>red</atc:colour>
+          </atc:acceptedStateFlashParams
+
+          - Added more flexible checks in the instruction screen's recall tasks. The instruction task now removes leading,
+            trailing and duplicate spaces in the entered text and converts to all uppercase (The same is applied to the
+            answer that is scripted into the instruction task).
+
+2.4.3     - Modified the Excel logger to write the files when the trial ends (either by timing out or by pressing 
+            'alt+ctrl+n') rather than just when the trial times out.
+
+2.4.2     - Fixed problem with canvasview not taking focus so that keypresses were not working for onscreen sprites. 
+            This was fixed by calling canvasview's setFocus() method after task::showEvent (which calls setFocus).
+
+          - Added functionality to allow an experimenter to script in the flash colour to be red when an aircraft is in
+            a proposed state ready to be accepted.
+
+          - New XML script elements
+          *******************************************************************************************************************
+          XML Element                 Description   Attributes  Description
+          *******************************************************************************************************************
+          <acceptedStateFlashParams>                colour      The colour an aircraft is to flash when in the proposed
+                                                                state ready to be accepted. (Orange by default)
+          Example:
+          <atc:acceptedStateFlashParams>
+            <atc:colour>red</atc:colour>
+          </atc:acceptedStateFlashParams
+
+2.4.1     - Added functionality to allow reminder boxes to be attached to
+            aircrafts
+          - New XML script elements
+          *******************************************************************************************************************
+          XML Element       Description                   Attributes  Description
+          *******************************************************************************************************************
+          <reminderBox>                                   aircraft    A string which represents the aircraft that the
+                                                                      reminder box should attach to. If this is ommitted
+                                                                      then the reminder box will just be a standard
+                                                                      reminder box that is displayed at a certain location
+                                                                      on screen. If this attribute is specified, the posX
+                                                                      and posY attributes then become offsets from the 
+                                                                      centre of the plane rather than coordinates on the map
+          Example:
+          <atc:reminderBox atc:bgColor="yellow" atc:width='420' atc:height='90' atc:posX='2080' 
+            atc:posY='880' atc:aircraft='C10' 
+            atc:displayText="If CallSign Greater 88/n Then Press 9" atc:displayTextSize='22'>
+            <atc:displayTime atc:startTime='82' atc:endTime='102'/>
+            <atc:flashColor>darkorange</atc:flashColor>
+            <atc:flashTime atc:startTime='236' atc:endTime='256'/>
+          </atc:reminderBox>
+
+2.4.0     - Disabled the Ok pushbutton in the instruction task if the textbox 
+            is empty
+            This prevents participants from entering nothing in the textbox
+          - Instruction tasks are now fixed so that an experimenter can specify 
+            a key to press to close an instruction screen
+          - Added version numbering so that particular versions of ATCLab can
+            be easily identified in the future

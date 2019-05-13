@@ -1,0 +1,1727 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!--
+	  @file     : Experiment 1 (Training)
+	  @project  : ATC Lab Interruptions
+	  @author   : Wilson
+	  @version  : Michael Wilson 2.4.5.10
+	  @modified : 11/02/2015
+
+	  @copyright  : 2015 Human Factors & Cognition Lab
+
+	  $Id: Experiment 1.xml,v 1.1 2004/11/05 07:37:19 loft Exp $
+	-->
+
+<atc:experiment 
+	  xmlns:atc="http://www.humanfactors.uq.edu.au/atc/2006/atc-ns" 
+	  atc:idx="Experiment1" 
+	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	  xsi:schemaLocation="http://www.humanfactors.uq.edu.au/atc/2006/atc-ns atc_experiment.xsd">
+
+	<!-- ===================================================================== -->
+	<!-- =============================== Configuration ======================= -->
+	<!-- ===================================================================== -->
+
+	<atc:config>
+
+		<!-- Units -->
+		<atc:units>
+			<atc:input>NM-FT</atc:input>
+		</atc:units>
+
+		<!-- Aircraft -->
+		<atc:aircraftParam atc:idx="B737">
+			<atc:speed>420</atc:speed>
+			<atc:level>370</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="B727">
+			<atc:speed>450</atc:speed>
+			<atc:level>370</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="B767">
+			<atc:speed>450</atc:speed>
+			<atc:level>470</atc:level>
+			<atc:RoC atc:maxLevel="250">1500</atc:RoC>
+			<atc:RoC atc:minLevel="250">500</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="B764">
+			<atc:speed>450</atc:speed>
+			<atc:level>470</atc:level>
+			<atc:RoC atc:maxLevel="250">1500</atc:RoC>
+			<atc:RoC atc:minLevel="250">500</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="B747">
+			<atc:speed>480</atc:speed>
+			<atc:level>430</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="B717">
+			<atc:speed>440</atc:speed>
+			<atc:level>370</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="A300">
+			<atc:speed>490</atc:speed>
+			<atc:level>430</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="A320">
+			<atc:speed>450</atc:speed>
+			<atc:level>390</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="A330">
+			<atc:speed>470</atc:speed>
+			<atc:level>430</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="B762">
+			<atc:speed>210</atc:speed>
+			<atc:level>250</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="B744">	
+			<atc:speed>205</atc:speed>
+			<atc:level>240</atc:level>
+			<atc:RoC atc:maxLevel="250">1500</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<!-- Instruction -->
+		<atc:instruction atc:idx="Rest">
+			<atc:text>
+				<![CDATA[<qt>
+			  <center>
+				<table width="60%" bgcolor="darkCyan" border="0" cellspacing="0" cellpadding="50">
+				<tr><td align="left"><font face="verdana" size="1">
+				  <p align="center"><font size="+1">Please wait for the next trial to start.</font></p>
+				</font></td></tr>
+				</table>
+			  </center>
+			</qt>]]>
+			</atc:text>
+			<atc:timeEvent>15</atc:timeEvent>
+			<atc:showCountdown>true</atc:showCountdown>
+		</atc:instruction>
+
+		<atc:instruction atc:idx="Rest1">
+			<atc:text>
+				<![CDATA[<qt>
+			  <center>
+				<table width="60%" bgcolor="darkCyan" border="0" cellspacing="0" cellpadding="50">
+				<tr><td align="left"><font face="verdana" size="1">
+				  <p align="center"><font size="+1">Please wait for the next trial to start.</font></p>
+				</font></td></tr>
+				</table>
+			  </center>
+			</qt>]]>
+			</atc:text>
+			<atc:timeEvent>1</atc:timeEvent>
+			<atc:showCountdown>true</atc:showCountdown>
+		</atc:instruction>
+
+		<atc:instruction atc:idx="Start">
+			<atc:text>
+				<![CDATA[<qt>
+			  <center>
+				<table width="60%" bgcolor="darkCyan" border="0" cellspacing="0" cellpadding="50">
+				<tr><td align="left"><font face="verdana" size="1">
+				  <p align="center"><font size="+1">Press the [SPACE] key to begin training.</font></p>
+				</font></td></tr>
+				</table>
+			  </center>
+			</qt>]]>
+			</atc:text>
+			<atc:keyEvent>Space</atc:keyEvent>
+		</atc:instruction>
+
+		<atc:instruction atc:idx="End">
+			<atc:text>
+				<![CDATA[<qt>
+			  <center>
+				<table width="60%" bgcolor="darkCyan" border="0" cellspacing="0" cellpadding="50">
+				<tr><td align="left"><font face="verdana" size="1">
+				  <p align="center"><font size="+1">This is the end of the training. Please inform the experimenter.</font></p>
+				  <p align="center"><font color="red"><b>Press the [SPACE] key to continue<b></font></p>
+				</font></td></tr>
+				</table>
+			  </center>
+			</qt>]]>
+			</atc:text>
+			<atc:keyEvent>Space</atc:keyEvent>
+		</atc:instruction>
+
+		<atc:instruction atc:idx="Control">
+			<atc:text>
+				<![CDATA[<qt>
+			  <center>
+				<table width="60%" bgcolor="darkCyan" border="0" cellspacing="0" cellpadding="50">
+				<tr><td align="left"><font face="verdana" size="1">
+				  <p align="center"><font size="+1">Please wait for further instructions before continuing. </font></p>
+				  <p align="center"><font color="red"><b>Please wait for further instructions<b></font></p>
+				</font></td></tr>
+				</table>
+			  </center>
+			</qt>]]>
+			</atc:text>
+			<atc:keyEvent>Space</atc:keyEvent>
+		</atc:instruction>
+
+		<atc:instruction atc:idx="Motivation1">
+			<atc:text>
+				<![CDATA[<qt>
+			  <center>
+				<table width="60%" bgcolor="darkCyan" border="0" cellspacing="0" cellpadding="50">
+				<tr><td align="left"><font face="verdana" size="3"> How anxious were you during the last test trial? 
+	Please enter a number between 0 (Not at all) and 10 (Extremely). 
+				  <p align="center"><font size="+1"></font></p>
+				</font></td></tr>
+				</table>
+			  </center>
+			</qt>]]>
+			</atc:text>
+			<atc:buttonEvent>ok</atc:buttonEvent>
+			<atc:textBox>text</atc:textBox>
+		</atc:instruction>
+
+		<atc:instruction atc:idx="Workload1">
+			<atc:text>
+				<![CDATA[<qt>
+			  <center>
+				<table width="60%" bgcolor="darkCyan" border="0" cellspacing="0" cellpadding="50">
+				<tr><td align="left"><font face="verdana" size="3"> How hard were you working during the last test trial? 
+	Please enter a number between 0 (Not at all) and 10 (Extremely). 
+				  <p align="center"><font size="+1"></font></p>
+				</font></td></tr>
+				</table>
+			  </center>
+			</qt>]]>
+			</atc:text>
+			<atc:buttonEvent>ok</atc:buttonEvent>
+			<atc:textBox>text</atc:textBox>
+		</atc:instruction>
+
+		<!-- =============================================================================== -->
+		<!-- ============================== VARIABLES & SETTINGS =========================== -->
+		<!-- =============================================================================== -->
+
+	</atc:config>
+
+	<atc:data>
+
+		<atc:param atc:idx='default'>
+			<atc:sectorEntryDistance>5</atc:sectorEntryDistance>
+			<atc:sectorExitDistance>1</atc:sectorExitDistance>
+			<atc:update_rate>1000</atc:update_rate>
+			<atc:update_multiplier>1</atc:update_multiplier>
+			<atc:horizontal_doms>5</atc:horizontal_doms>
+			<atc:vertical_doms>0</atc:vertical_doms>
+		</atc:param>
+
+		<atc:map atc:idx='map1'>
+			<!--
+		  <atc:region atc:x='0' atc:y='0' atc:x_dim='100' atc:y_dim='75' />
+		  -->
+			<atc:region atc:x='0' atc:y='0' atc:x_dim='70' atc:y_dim='52.5' />
+
+			<atc:location atc:idx="one"       atc:visible="on" atc:x='16.9014' atc:y='52.5'    />
+			<atc:location atc:idx="two"       atc:visible="off" atc:x='6.7561'  atc:y='52.5'    />
+			<atc:location atc:idx="three"     atc:visible="off" atc:x='67.2757' atc:y='52.5'    />
+			<atc:location atc:idx="four"      atc:visible="off" atc:x='53.3153' atc:y='52.5'    />
+			<atc:location atc:idx="five"      atc:visible="off" atc:x='70'      atc:y='35.8901' />
+			<atc:location atc:idx="six"       atc:visible="off" atc:x='70'      atc:y='18.8871' />
+			<atc:location atc:idx="seven"     atc:visible="off" atc:x='41.7534' atc:y='0'       />
+			<atc:location atc:idx="eight"     atc:visible="off" atc:x='50.6008' atc:y='0'       />
+			<atc:location atc:idx="nine"      atc:visible="off" atc:x='14.3025' atc:y='0'       />
+			<atc:location atc:idx="ten"       atc:visible="off" atc:x='23.7115' atc:y='0'       />
+			<atc:location atc:idx="eleven"    atc:visible="off" atc:x='0'       atc:y='17.5695' />
+			<atc:location atc:idx="twelve"    atc:visible="off" atc:x='0'       atc:y='34.5725' />
+			<atc:location atc:idx="thirteen"  atc:visible="off" atc:x='24.9686' atc:y='35.0425' />
+			<atc:location atc:idx="fourteen"  atc:visible="off" atc:x='43.0438' atc:y='35.3827' />
+			<atc:location atc:idx="fifteen"   atc:visible="off" atc:x='41.7759' atc:y='18.3559' />
+			<atc:location atc:idx="sixteen"   atc:visible="off" atc:x='23.7007' atc:y='18.0156' />
+			<atc:location atc:idx="seventeen" atc:visible="off" atc:x='51.1627' atc:y='43.7893' />
+			<atc:location atc:idx="eighteen"  atc:visible="off" atc:x='50.5087' atc:y='35.5232' />
+			<atc:location atc:idx="nineteen"  atc:visible="off" atc:x='14.3025' atc:y='34.8417' />
+			<atc:location atc:idx="twenty"    atc:visible="off" atc:x='10.7531' atc:y='42.8946' />
+
+			<atc:route atc:idx="routeA">     
+				<atc:pointref atc:location="five"/>
+				<atc:pointref atc:location="twelve"/>
+			</atc:route>
+
+			<atc:route atc:idx="routeB">     
+				<atc:pointref atc:location="eleven"/>
+				<atc:pointref atc:location="six"/>
+			</atc:route>
+
+			<atc:route atc:idx="routeC">     
+				<atc:pointref atc:location="eight"/>    
+				<atc:pointref atc:location="eighteen"/>
+				<atc:pointref atc:location="three"/>
+			</atc:route>
+
+			<atc:route atc:idx="routeD">     
+				<atc:pointref atc:location="two"/>
+				<atc:pointref atc:location="twenty"/>
+				<atc:pointref atc:location="nineteen"/>
+				<atc:pointref atc:location="nine"/>
+			</atc:route>
+
+			<atc:route atc:idx="routeE">     
+				<atc:pointref atc:location="seven"/>
+				<atc:pointref atc:location="fifteen"/>
+				<atc:pointref atc:location="thirteen"/>
+				<atc:pointref atc:location="one"/>
+			</atc:route>
+
+			<atc:route atc:idx="routeF">     
+				<atc:pointref atc:location="four"/>
+				<atc:pointref atc:location="seventeen"/>
+				<atc:pointref atc:location="fourteen"/>
+				<atc:pointref atc:location="sixteen"/>
+				<atc:pointref atc:location="ten"/>
+			</atc:route>
+
+			<atc:route atc:idx="routeG">     
+				<atc:pointref atc:location="two"/>
+				<atc:pointref atc:location="twenty"/>
+				<atc:pointref atc:location="nineteen"/>
+				<atc:pointref atc:location="twelve"/>
+			</atc:route>
+
+			<atc:sector atc:idx="lofty" atc:status="active">
+				<atc:vertex atc:x='10.7531' atc:y='42.8946' />
+				<atc:vertex atc:x='51.1627' atc:y='43.7893' />
+				<atc:vertex atc:x='59.3639' atc:y='33.5005' />
+				<atc:vertex atc:x='58.6183' atc:y='10.8354' />
+				<atc:vertex atc:x='48.7769' atc:y='8.0022'  />
+				<atc:vertex atc:x='13.2881' atc:y='10.8354' />
+			</atc:sector>
+		</atc:map>
+
+		<!-- ===================================================================== -->
+		<!-- =========================== SCRIPTS ================================= -->
+		<!-- ===================================================================== -->
+
+		<!-- ================================= -->
+		<!-- =============== 1 =============== -->
+		<!-- ===========INT TIME 120s========= -->
+		<!-- ================================= -->
+
+		<atc:sky atc:idx='script1'> 
+
+			<!-- ================RTPM=============== -->
+			<!-- ================================= -->
+
+			<atc:aircraft atc:idx="C92" atc:type="B717">
+				<atc:start>0</atc:start>
+				<atc:altitude>35000</atc:altitude>				
+				<atc:altitudeChangeEnableTime>99</atc:altitudeChangeEnableTime>				
+				<atc:velocity>450</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='13.5853'	atc:y='36.4749' />
+					<atc:point atc:x='14.3025' 	atc:y='34.8417' />
+					<atc:point atc:x='14.3025' 	atc:y='31.8417' >
+						<atc:altitude>36000</atc:altitude>
+						<atc:ascent>3000</atc:ascent>
+					</atc:point>
+					<atc:point atc:x='14.3025'	atc:y='0'       />
+				</atc:flightpath>
+				<atc:conflictDetails>
+					<atc:trial>trial1</atc:trial>
+					<atc:acceptanceTime>99</atc:acceptanceTime>
+					<atc:conflictTime>130</atc:conflictTime>
+					<atc:conflictAircraft>C11</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C11" atc:type="B767">
+				<atc:start>50</atc:start>
+				<atc:altitude>36000</atc:altitude>
+				<atc:altitudeChangeEnableTime>99</atc:altitudeChangeEnableTime>								
+				<atc:velocity>440</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='0'	   atc:y='17.5695'  	/>
+					<atc:point atc:x='70' 	   atc:y='18.8871'  	/>
+				</atc:flightpath>
+				<atc:conflictDetails>
+					<atc:trial>trial1</atc:trial>
+					<atc:acceptanceTime>99</atc:acceptanceTime>
+					<atc:conflictTime>130</atc:conflictTime>
+					<atc:conflictAircraft>C92</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C28" atc:type="B767">
+				<atc:start>0</atc:start>
+				<atc:altitude>32000</atc:altitude>
+				<atc:velocity>480</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='41.7769'	atc:y='16.6072'  	/>
+					<atc:point atc:x='41.7759'	atc:y='18.3559'  	/>
+					<atc:point atc:x='24.9686'	atc:y='35.0425'  	/>
+					<atc:point atc:x='16.9014'	atc:y='52.5'  	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:handoffKey>key_up</atc:handoffKey>			
+			</atc:aircraft>
+
+			<!-- ================CF=============== -->
+			<!-- ================================= -->
+
+			<atc:aircraft atc:idx="C8" atc:type="A330">
+				<atc:start>25</atc:start>
+				<atc:altitude>29000</atc:altitude>
+				<atc:velocity>490</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='53.3153' 	atc:y='52.5'	/>
+					<atc:point atc:x='51.1627' 	atc:y='43.7893'	/>
+					<atc:point atc:x='43.0438' 	atc:y='35.3827'	/>
+					<atc:point atc:x='23.7007' 	atc:y='18.0156'	/>
+					<atc:point atc:x='23.7115' 	atc:y='0'	/>
+				</atc:flightpath>
+				<atc:conflictDetails>
+					<atc:trial>trial1</atc:trial>
+					<atc:acceptanceTime>24</atc:acceptanceTime>
+					<atc:conflictTime>126</atc:conflictTime>
+					<atc:conflictAircraft>C50</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C50" atc:type="B762">
+				<atc:start>0</atc:start>
+				<atc:altitude>29000</atc:altitude>
+				<atc:velocity>490</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='66.2436'  atc:y='35.8163' />
+					<atc:point atc:x='0'        atc:y='34.5725' />
+				</atc:flightpath>
+				<atc:conflictDetails>
+					<atc:trial>trial1</atc:trial>
+					<atc:acceptanceTime>24</atc:acceptanceTime>
+					<atc:conflictTime>126</atc:conflictTime>
+					<atc:conflictAircraft>C8</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C14" atc:type="B744">
+				<atc:start>0</atc:start>
+				<atc:altitude>41000</atc:altitude>
+				<atc:velocity>510</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='7.5505'	   atc:y='17.7101'/>
+					<atc:point atc:x='23.7007' 	   atc:y='18.0156'/>
+					<atc:point atc:x='41.7759' 	   atc:y='18.3559'/>
+					<atc:point atc:x='70' 	   	   atc:y='18.8871'/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:conflictDetails>
+					<atc:trial>trial1</atc:trial>
+					<atc:acceptanceTime>115</atc:acceptanceTime>
+					<atc:conflictTime>218</atc:conflictTime>
+					<atc:conflictAircraft>C30</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C30" atc:type="B744">
+				<atc:start>115</atc:start>
+				<atc:altitude>41000</atc:altitude>
+				<atc:velocity>510</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='41.7534'	atc:y='0'  		/>
+					<atc:point atc:x='41.7759'	atc:y='18.3559' 	/>
+					<atc:point atc:x='24.9686'	atc:y='35.0425' 	/>
+					<atc:point atc:x='16.9014'	atc:y='52.5'  	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>si</atc:flashItem>
+					<atc:colour>blue</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:conflictDetails>
+					<atc:trial>trial1</atc:trial>
+					<atc:acceptanceTime>115</atc:acceptanceTime>
+					<atc:conflictTime>218</atc:conflictTime>
+					<atc:conflictAircraft>C14</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C3" atc:type="B747">
+				<atc:start>0</atc:start>
+				<atc:altitude>43000</atc:altitude>
+				<atc:velocity>500</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='6.9553'	atc:y='52.0216'  	/>
+					<atc:point atc:x='10.7531'	atc:y='42.8946' />
+					<atc:point atc:x='14.3025'	atc:y='34.8417' />
+					<atc:point atc:x='14.3025'	atc:y='0'       />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:conflictDetails>
+					<atc:trial>trial1</atc:trial>
+					<atc:acceptanceTime>170</atc:acceptanceTime>
+					<atc:conflictTime>244</atc:conflictTime>
+					<atc:conflictAircraft>C58</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C58" atc:type="A330">
+				<atc:start>170</atc:start>
+				<atc:altitude>43000</atc:altitude>
+				<atc:velocity>470</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='0'	   atc:y='17.5695'  	/>
+					<atc:point atc:x='70' 	   atc:y='18.8871'  	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+			<!-- Aircraft already onscreen -->
+			<atc:aircraft atc:idx="C83" atc:type="B747">
+				<atc:start>0</atc:start>
+				<atc:altitude>43000</atc:altitude>
+				<atc:velocity>500</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='7.2610'  atc:y='34.8688' />
+					<atc:point atc:x='0'        atc:y='34.5725' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C22" atc:type="B747">
+				<atc:start>0</atc:start>
+				<atc:altitude>43000</atc:altitude>
+				<atc:velocity>500</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='57.6556'  atc:y='18.5906' />
+					<atc:point atc:x='70'       atc:y='18.8871' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C34" atc:type="A330">
+				<atc:start>0</atc:start>
+				<atc:altitude>30000</atc:altitude>
+				<atc:velocity>470</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='14.3025' atc:y='13.8171'  />
+					<atc:point atc:x='14.3025' atc:y='0'        />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C79" atc:type="A320">
+				<atc:start>0</atc:start>
+				<atc:altitude>39000</atc:altitude>
+				<atc:velocity>380</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='43.0438' atc:y='35.3827'  />
+					<atc:point atc:x='23.7007'	atc:y='18.0156' />
+					<atc:point atc:x='23.7115'	atc:y='0' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C19" atc:type="B747">
+				<atc:start>0</atc:start>
+				<atc:altitude>43000</atc:altitude>
+				<atc:velocity>500</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='22.0687'  atc:y='41.3269' />
+					<atc:point atc:x='16.9014'  atc:y='52.5' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C35" atc:type="B767">
+				<atc:start>0</atc:start>
+				<atc:altitude>36000</atc:altitude>
+				<atc:velocity>480</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='50.5092'	atc:y='35.3692'  	/>
+					<atc:point atc:x='50.5087'	atc:y='35.5232'   />
+					<atc:point atc:x='67.2757'	atc:y='52.5'  	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C68" atc:type="B717">
+				<atc:start>0</atc:start>
+				<atc:altitude>37000</atc:altitude>
+				<atc:velocity>450</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='55.8787'	atc:y='40.9586'  	/>
+					<atc:point atc:x='67.2757'	atc:y='52.5'  	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C41" atc:type="B767">
+				<atc:start>0</atc:start>
+				<atc:altitude>44000</atc:altitude>
+				<atc:velocity>480</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='23.7028' atc:y='15.5438'  />
+					<atc:point atc:x='23.7115' atc:y='0'        />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C73" atc:type="B737">
+				<atc:start>0</atc:start>
+				<atc:altitude>37000</atc:altitude>
+				<atc:velocity>460</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='27.8503'  atc:y='32.1799' />
+					<atc:point atc:x='24.9686'  atc:y='35.0425' />
+					<atc:point atc:x='16.9014'  atc:y='52.5' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<!-- Aircraft entering after start -->
+
+			<atc:aircraft atc:idx="C39" atc:type="B744">
+				<atc:start>55</atc:start>
+				<atc:altitude>40000</atc:altitude>
+				<atc:velocity>490</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='70'	   atc:y='35.8901'  	/>
+					<atc:point atc:x='0' 	   atc:y='34.5725'  	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C65" atc:type="B762">
+				<atc:start>70</atc:start>
+				<atc:altitude>39000</atc:altitude>
+				<atc:velocity>450</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='50.6008'	atc:y='0'  	/>
+					<atc:point atc:x='50.5087'	atc:y='35.5232' />
+					<atc:point atc:x='67.2757'	atc:y='52.5'  	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C33" atc:type="B717">
+				<atc:start>125</atc:start>
+				<atc:altitude>37000</atc:altitude>
+				<atc:velocity>430</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='53.3153' 	atc:y='52.5'	/>
+					<atc:point atc:x='51.1627' 	atc:y='43.7893'	/>
+					<atc:point atc:x='43.0438' 	atc:y='35.3827'	/>
+					<atc:point atc:x='23.7007' 	atc:y='18.0156'	/>
+					<atc:point atc:x='23.7115' 	atc:y='0'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C75" atc:type="B747">
+				<atc:start>150</atc:start>
+				<atc:altitude>43000</atc:altitude>
+				<atc:velocity>500</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='6.7561'	atc:y='52.5'  	/>
+					<atc:point atc:x='10.7531'	atc:y='42.8946' />
+					<atc:point atc:x='14.3025'	atc:y='34.8417' />
+					<atc:point atc:x='14.3025'	atc:y='0'       />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C20" atc:type="B737">
+				<atc:start>200</atc:start>
+				<atc:altitude>34000</atc:altitude>
+				<atc:velocity>460</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='6.7561'	atc:y='52.5'  	/>
+					<atc:point atc:x='10.7531'	atc:y='42.8946' />
+					<atc:point atc:x='14.3025'	atc:y='34.8417' />
+					<atc:point atc:x='14.3025'	atc:y='0'       />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C43" atc:type="A330">
+				<atc:start>220</atc:start>
+				<atc:altitude>43000</atc:altitude>
+				<atc:velocity>490</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='53.3153' 	atc:y='52.5'	/>
+					<atc:point atc:x='51.1627' 	atc:y='43.7893'	/>
+					<atc:point atc:x='43.0438' 	atc:y='35.3827'	/>
+					<atc:point atc:x='23.7007' 	atc:y='18.0156'	/>
+					<atc:point atc:x='23.7115' 	atc:y='0'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C10" atc:type="A320">
+				<atc:start>215</atc:start>
+				<atc:altitude>33000</atc:altitude>
+				<atc:velocity>440</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='70'	   atc:y='35.8901'  	/>
+					<atc:point atc:x='0' 	   atc:y='34.5725'  	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<!-- ==============Box================ -->
+			<!-- ================================= -->	
+
+			<atc:reminderBox atc:bgColor="LightBlue" atc:width='440' atc:height='105' atc:aircraft='C92' atc:posX='-200' atc:posY='22' atc:displayText="Caution: Altitude changing! /nOnce cruising resolve /nimpending conflict with C11"  atc:displayTextSize='20'>
+				<atc:displayTime atc:startTime='60' atc:endTime='80'/>
+				<atc:flashColor>darkOrange</atc:flashColor>
+				<atc:flashColor>darkOrange</atc:flashColor>
+				<atc:flashTime atc:startTime='0' atc:endTime='0'/>
+				<atc:dismissButton atc:enable_time='62' atc:label="Acknowledge" atc:fontSize='10' atc:width='110' atc:height='30' atc:posX='-40' atc:posY='73'/>
+			</atc:reminderBox>
+
+			<atc:reminderBox atc:bgColor="LightBlue" atc:width='360' atc:height='70' atc:aircraft='C28' atc:posX='-200' atc:posY='50' atc:displayText=" Press Up Arrow Key /n  when handing off C28"  atc:displayTextSize='20'>
+				<atc:displayTime atc:startTime='160' atc:endTime='180'/>
+				<atc:flashColor>darkOrange</atc:flashColor>
+				<atc:flashColor>darkOrange</atc:flashColor>
+				<atc:flashTime atc:startTime='0' atc:endTime='0'/>
+				<atc:dismissButton atc:enable_time='163' atc:label="Acknowledge" atc:fontSize='10' atc:width='110' atc:height='30' atc:posX='-70' atc:posY='70'/>
+			</atc:reminderBox>
+
+		</atc:sky>
+
+		<!-- ================================= -->
+		<!-- =============== 2 =============== -->
+		<!-- ===========INT TIME 120s========= -->
+		<!-- ================================= -->
+
+		<atc:sky atc:idx='script2'> 
+			<!-- ==============PMRT================ -->
+			<!-- ================================= -->	
+			<atc:aircraft atc:idx="C77" atc:type="B737">
+				<atc:start>0</atc:start>
+				<atc:altitude>31000</atc:altitude>
+				<atc:altitudeChangeEnableTime>84</atc:altitudeChangeEnableTime>
+				<atc:velocity>420</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='22.8493'    atc:y='17.9987' />
+					<atc:point atc:x='24.8493'    atc:y='18.0' >
+						<atc:altitude>33000</atc:altitude>
+						<atc:ascent>3000</atc:ascent>
+					</atc:point>
+					<atc:point atc:x='70'      	atc:y='18.8871' />				
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:conflictDetails>
+					<atc:trial>trial1</atc:trial>
+					<atc:acceptanceTime>84</atc:acceptanceTime>
+					<atc:conflictTime>133</atc:conflictTime>
+					<atc:conflictAircraft>C63</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C63" atc:type="B744">
+				<atc:start>25</atc:start>
+				<atc:altitude>33000</atc:altitude>
+				<atc:altitudeChangeEnableTime>84</atc:altitudeChangeEnableTime>					
+				<atc:velocity>490</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='41.7534' 	atc:y='0'	/>
+					<atc:point atc:x='41.7759' 	atc:y='18.3559'	/>
+					<atc:point atc:x='24.9686' 	atc:y='35.0425'	/>
+					<atc:point atc:x='16.9014' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:conflictDetails>
+					<atc:trial>trial1</atc:trial>
+					<atc:acceptanceTime>84</atc:acceptanceTime>
+					<atc:conflictTime>133</atc:conflictTime>
+					<atc:conflictAircraft>C77</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C33" atc:type="A320">
+				<atc:start>0</atc:start>
+				<atc:altitude>36000</atc:altitude>
+				<atc:velocity>440</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='42.5149'    atc:y='35.3733' />
+					<atc:point atc:x='0'       	atc:y='34.5725' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:handoffKey>key_left</atc:handoffKey>
+			</atc:aircraft>
+
+			<!-- ==============Conflict================ -->
+			<!-- ================================= -->				
+
+			<atc:aircraft atc:idx="C82" atc:type="A320">
+				<atc:start>5</atc:start>
+				<atc:altitude>35000</atc:altitude>
+				<atc:velocity>420</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='0'       	atc:y='17.5695' />
+					<atc:point atc:x='70'      	atc:y='18.8871' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:conflictDetails>
+					<atc:trial>trial2</atc:trial>
+					<atc:acceptanceTime>5</atc:acceptanceTime>
+					<atc:conflictTime>89</atc:conflictTime>
+					<atc:conflictAircraft>C55</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C55" atc:type="B744">
+				<atc:start>0</atc:start>
+				<atc:altitude>35000</atc:altitude>
+				<atc:velocity>450</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='14.2930'  	atc:y='31' 	/>
+					<atc:point atc:x='14.3025' 	atc:y='0'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:conflictDetails>
+					<atc:trial>trial2</atc:trial>
+					<atc:acceptanceTime>5</atc:acceptanceTime>
+					<atc:conflictTime>89</atc:conflictTime>
+					<atc:conflictAircraft>C82</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C86" atc:type="B762">
+				<atc:start>0</atc:start>
+				<atc:altitude>29000</atc:altitude>
+				<atc:velocity>460</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='68'    atc:y='35.8901' />
+					<atc:point atc:x='0'    atc:y='34.5725' />
+				</atc:flightpath>
+				<atc:conflictDetails>
+					<atc:trial>trial2</atc:trial>
+					<atc:acceptanceTime>0</atc:acceptanceTime>
+					<atc:conflictTime>98</atc:conflictTime>
+					<atc:conflictAircraft>C82</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C22" atc:type="B762">
+				<atc:start>0</atc:start>
+				<atc:altitude>29000</atc:altitude>
+				<atc:velocity>450</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='50.5315' 	atc:y='23.3035' 	/>
+					<atc:point atc:x='50.5087' 	atc:y='35.5232'	/>
+					<atc:point atc:x='67.2757' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:conflictDetails>
+					<atc:trial>trial2</atc:trial>
+					<atc:acceptanceTime>0</atc:acceptanceTime>
+					<atc:conflictTime>98</atc:conflictTime>
+					<atc:conflictAircraft>C82</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<!-- ================================= -->				
+
+
+			<atc:aircraft atc:idx="C51" atc:type="B762">
+				<atc:start>0</atc:start>
+				<atc:altitude>29000</atc:altitude>
+				<atc:velocity>470</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='14.7568'    atc:y='34.8489' />
+					<atc:point atc:x='0'       	atc:y='34.5725' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C42" atc:type="B717">
+				<atc:start>0</atc:start>
+				<atc:altitude>32000</atc:altitude>
+				<atc:velocity>430</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='60.3833'    atc:y='18.7086' />
+					<atc:point atc:x='70'      	atc:y='18.8871' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C73" atc:type="A330">
+				<atc:start>0</atc:start>
+				<atc:altitude>37000</atc:altitude>
+				<atc:velocity>430</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='54.9883' 	atc:y='40.0590' 	/>
+					<atc:point atc:x='67.2757' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C28" atc:type="B717">
+				<atc:start>0</atc:start>
+				<atc:altitude>34000</atc:altitude>
+				<atc:velocity>430</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='14.3004' 	atc:y='10.0656'	/>
+					<atc:point atc:x='14.3025' 	atc:y='0'		/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+
+
+			<atc:aircraft atc:idx="C48" atc:type="A320">
+				<atc:start>0</atc:start>
+				<atc:altitude>40000</atc:altitude>
+				<atc:velocity>400</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='8.5129'  	atc:y='48.2554' 	/>
+					<atc:point atc:x='10.7531' 	atc:y='42.8946'	/>
+					<atc:point atc:x='14.3025' 	atc:y='34.8417'	/>
+					<atc:point atc:x='14.3025' 	atc:y='0'		/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C45" atc:type="B744">
+				<atc:start>0</atc:start>
+				<atc:altitude>41000</atc:altitude>
+				<atc:velocity>490</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='41.7713' 	atc:y='14.3234'	/>
+					<atc:point atc:x='41.7759' 	atc:y='18.3559'	/>
+					<atc:point atc:x='24.9686' 	atc:y='35.0425'	/>
+					<atc:point atc:x='16.9014' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C99" atc:type="B762">
+				<atc:start>0</atc:start>
+				<atc:altitude>31000</atc:altitude>
+				<atc:velocity>450</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='21.9112' 	atc:y='41.6607'	/>
+					<atc:point atc:x='16.9014' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C25" atc:type="A320">
+				<atc:start>0</atc:start>
+				<atc:altitude>38000</atc:altitude>
+				<atc:velocity>400</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='34.8858' 	atc:y='28.0560'	/>
+					<atc:point atc:x='23.7007' 	atc:y='18.0156'	/>
+					<atc:point atc:x='23.7115' 	atc:y='0'		/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C37" atc:type="B717">
+				<atc:start>0</atc:start>
+				<atc:altitude>35000</atc:altitude>
+				<atc:velocity>410</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='23.7057' 	atc:y='11.3237'	/>
+					<atc:point atc:x='23.7115' 	atc:y='0'		/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<!-- Aircraft entering after start-->
+
+			<atc:aircraft atc:idx="C7" atc:type="A320">
+				<atc:start>50</atc:start>
+				<atc:altitude>31000</atc:altitude>
+				<atc:velocity>400</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='6.7561'  	atc:y='52.5' 	/>
+					<atc:point atc:x='10.7531' 	atc:y='42.8946'	/>
+					<atc:point atc:x='14.3025' 	atc:y='34.8417'	/>
+					<atc:point atc:x='14.3025' 	atc:y='0'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C13" atc:type="A320">
+				<atc:start>65</atc:start>
+				<atc:altitude>38000</atc:altitude>
+				<atc:velocity>400</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='53.3153' 	atc:y='52.5'	/>
+					<atc:point atc:x='51.1627' 	atc:y='43.7893'	/>
+					<atc:point atc:x='43.0438' 	atc:y='35.3827'	/>
+					<atc:point atc:x='23.7007' 	atc:y='18.0156'	/>
+					<atc:point atc:x='23.7115' 	atc:y='0'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C19" atc:type="B744">
+				<atc:start>105</atc:start>
+				<atc:altitude>30000</atc:altitude>
+				<atc:velocity>510</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='50.6008' 	atc:y='0' 	/>
+					<atc:point atc:x='50.5087' 	atc:y='35.5232'	/>
+					<atc:point atc:x='67.2757' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+
+			<atc:aircraft atc:idx="C2" atc:type="A330">
+				<atc:start>105</atc:start>
+				<atc:altitude>41000</atc:altitude>
+				<atc:velocity>430</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='0'       	atc:y='17.5695' />
+					<atc:point atc:x='70'      	atc:y='18.8871' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>si</atc:flashItem>
+					<atc:colour>blue</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C31" atc:type="B744">
+				<atc:start>145</atc:start>
+				<atc:altitude>30000</atc:altitude>
+				<atc:velocity>470</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='70'      	atc:y='35.8901' />
+					<atc:point atc:x='0'       	atc:y='34.5725' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+
+			<atc:aircraft atc:idx="C23" atc:type="A320">
+				<atc:start>200</atc:start>
+				<atc:altitude>38000</atc:altitude>
+				<atc:velocity>440</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='41.7534' 	atc:y='0'	/>
+					<atc:point atc:x='41.7759' 	atc:y='18.3559'	/>
+					<atc:point atc:x='24.9686' 	atc:y='35.0425'	/>
+					<atc:point atc:x='16.9014' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C53" atc:type="A320">
+				<atc:start>200</atc:start>
+				<atc:altitude>39000</atc:altitude>
+				<atc:velocity>380</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='53.3153' 	atc:y='52.5'	/>
+					<atc:point atc:x='51.1627' 	atc:y='43.7893'	/>
+					<atc:point atc:x='43.0438' 	atc:y='35.3827'	/>
+					<atc:point atc:x='23.7007' 	atc:y='18.0156'	/>
+					<atc:point atc:x='23.7115' 	atc:y='0'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C68" atc:type="B717">
+				<atc:start>220</atc:start>
+				<atc:altitude>33000</atc:altitude>
+				<atc:velocity>390</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='50.6008' 	atc:y='0' 	/>
+					<atc:point atc:x='50.5087' 	atc:y='35.5232'	/>
+					<atc:point atc:x='67.2757' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C15" atc:type="B767">
+				<atc:start>230</atc:start>
+				<atc:altitude>47000</atc:altitude>
+				<atc:velocity>460</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='6.7561'  	atc:y='52.5' 	/>
+					<atc:point atc:x='10.7531' 	atc:y='42.8946'	/>
+					<atc:point atc:x='14.3025' 	atc:y='34.8417'	/>
+					<atc:point atc:x='14.3025' 	atc:y='0'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<!-- ==============Box================ -->
+			<!-- ================================= -->	
+
+			<atc:reminderBox atc:bgColor="LightBlue" atc:width='440' atc:height='105' atc:aircraft='C77' atc:posX='-200' atc:posY='22' atc:displayText="Caution: Altitude changing! /nOnce cruising resolve /nimpending conflict with C63"  atc:displayTextSize='20'>
+				<atc:displayTime atc:startTime='60' atc:endTime='80'/>
+				<atc:flashColor>darkOrange</atc:flashColor>
+				<atc:flashColor>darkOrange</atc:flashColor>
+				<atc:flashTime atc:startTime='0' atc:endTime='0'/>
+				<atc:dismissButton atc:enable_time='62' atc:label="Acknowledge" atc:fontSize='10' atc:width='110' atc:height='30' atc:posX='-40' atc:posY='73'/>
+			</atc:reminderBox>
+
+			<atc:reminderBox atc:bgColor="LightBlue" atc:width='360' atc:height='70' atc:aircraft='C33' atc:posX='-200' atc:posY='50' atc:displayText=" Press Left Arrow Key /n  when handing off C33"  atc:displayTextSize='20'>
+				<atc:displayTime atc:startTime='140' atc:endTime='160'/>
+				<atc:flashColor>darkOrange</atc:flashColor>
+				<atc:flashColor>darkOrange</atc:flashColor>
+				<atc:flashTime atc:startTime='0' atc:endTime='0'/>
+				<atc:dismissButton atc:enable_time='143' atc:label="Acknowledge" atc:fontSize='10' atc:width='110' atc:height='30' atc:posX='-70' atc:posY='70'/>
+			</atc:reminderBox>
+
+		</atc:sky>
+
+		<!-- ================================= -->
+		<!-- =============== 3 =============== -->
+		<!-- ===========INT TIME 120s========= -->
+		<!-- ================================= -->
+
+		<atc:sky atc:idx='script3'> 
+			<!-- ================================= -->				
+			<!-- ================================= -->				
+
+			<atc:aircraft atc:idx="C7" atc:type="A330">
+				<atc:start>0</atc:start>
+				<atc:altitude>30000</atc:altitude>
+				<atc:velocity>490</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='39.6312' 	atc:y='20.4853'	/>
+					<atc:point atc:x='24.9686' 	atc:y='35.0425'	/>
+					<atc:point atc:x='16.9014' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:handoffKey>key_up</atc:handoffKey>	
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C88" atc:type="B717">
+				<atc:start>0</atc:start>
+				<atc:altitude>30000</atc:altitude>
+				<atc:altitudeChangeEnableTime>237</atc:altitudeChangeEnableTime>								
+				<atc:velocity>450</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='50.5933' 	atc:y='2.8300' 	/>
+					<atc:point atc:x='50.5087' 	atc:y='20.5232'	>
+						<atc:altitude>32000</atc:altitude>
+						<atc:ascent>2000</atc:ascent>
+					</atc:point>
+					<atc:point atc:x='50.5087' 	atc:y='35.5232'	/>					
+					<atc:point atc:x='67.2757' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:conflictDetails>
+					<atc:trial>trial3</atc:trial>
+					<atc:acceptanceTime>237</atc:acceptanceTime>
+					<atc:conflictTime>251</atc:conflictTime>
+					<atc:conflictAircraft>C98</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C98" atc:type="A330">
+				<atc:start>135</atc:start>
+				<atc:altitude>32000</atc:altitude>
+				<atc:altitudeChangeEnableTime>237</atc:altitudeChangeEnableTime>					
+				<atc:velocity>450</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='70'      	atc:y='35.8901' />
+					<atc:point atc:x='0'       	atc:y='34.5725' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:conflictDetails>
+					<atc:trial>trial3</atc:trial>
+					<atc:acceptanceTime>237</atc:acceptanceTime>
+					<atc:conflictTime>251</atc:conflictTime>
+					<atc:conflictAircraft>C88</atc:conflictAircraft>
+				</atc:conflictDetails>			
+			</atc:aircraft>
+			<!-- ================================= -->				
+			<!-- ================================= -->	
+
+
+			<atc:aircraft atc:idx="C35" atc:type="B762">
+				<atc:start>0</atc:start>
+				<atc:altitude>37000</atc:altitude>
+				<atc:velocity>430</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='17.4463'    atc:y='17.8979' />
+					<atc:point atc:x='70'      	atc:y='18.8871' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:conflictDetails>
+					<atc:trial>trial3</atc:trial>
+					<atc:acceptanceTime>20</atc:acceptanceTime>
+					<atc:conflictTime>167</atc:conflictTime>
+					<atc:conflictAircraft>C61</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C61" atc:type="B762">
+				<atc:start>20</atc:start>
+				<atc:altitude>37000</atc:altitude>
+				<atc:velocity>390</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='41.7534' 	atc:y='0'	/>
+					<atc:point atc:x='41.7759' 	atc:y='18.3559'	/>
+					<atc:point atc:x='24.9686' 	atc:y='35.0425'	/>
+					<atc:point atc:x='16.9014' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:conflictDetails>
+					<atc:trial>trial3</atc:trial>
+					<atc:acceptanceTime>20</atc:acceptanceTime>
+					<atc:conflictTime>167</atc:conflictTime>
+					<atc:conflictAircraft>C35</atc:conflictAircraft>
+				</atc:conflictDetails>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C30" atc:type="B737">
+				<atc:start>0</atc:start>
+				<atc:altitude>35000</atc:altitude>
+				<atc:velocity>420</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='43.7782' 	atc:y='36.1431'	/>
+					<atc:point atc:x='43.0438' 	atc:y='35.3827'	/>
+					<atc:point atc:x='23.7007' 	atc:y='18.0156'	/>
+					<atc:point atc:x='23.7115' 	atc:y='0'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:conflictDetails>
+					<atc:trial>trial3</atc:trial>
+					<atc:acceptanceTime>90</atc:acceptanceTime>
+					<atc:conflictTime>236</atc:conflictTime>
+					<atc:conflictAircraft>C12</atc:conflictAircraft>
+				</atc:conflictDetails>			
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C12" atc:type="B717">
+				<atc:start>90</atc:start>
+				<atc:altitude>35000</atc:altitude>
+				<atc:velocity>460</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='0'       	atc:y='17.5695' />
+					<atc:point atc:x='70'      	atc:y='18.8871' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+				<atc:conflictDetails>
+					<atc:trial>trial3</atc:trial>
+					<atc:acceptanceTime>90</atc:acceptanceTime>
+					<atc:conflictTime>236</atc:conflictTime>
+					<atc:conflictAircraft>C30</atc:conflictAircraft>
+				</atc:conflictDetails>			
+			</atc:aircraft>
+
+			<!-- ================================= -->				
+
+			<atc:aircraft atc:idx="C43" atc:type="B717">
+				<atc:start>0</atc:start>
+				<atc:altitude>31000</atc:altitude>
+				<atc:velocity>410</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='41.7654' 	atc:y='9.8899'	/>
+					<atc:point atc:x='41.7759' 	atc:y='18.3559'	/>
+					<atc:point atc:x='24.9686' 	atc:y='35.0425'	/>
+					<atc:point atc:x='16.9014' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C22" atc:type="B767">
+				<atc:start>0</atc:start>
+				<atc:altitude>47000</atc:altitude>
+				<atc:velocity>430</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='50.8345' 	atc:y='35.8530'	/>
+					<atc:point atc:x='67.2757' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+
+
+			<atc:aircraft atc:idx="C55" atc:type="A320">
+				<atc:start>0</atc:start>
+				<atc:altitude>34000</atc:altitude>
+				<atc:velocity>380</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='26.1645'    atc:y='35.0650' />
+					<atc:point atc:x='0'       	atc:y='34.5725' />
+				</atc:flightpath>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C95" atc:type="A320">
+				<atc:start>0</atc:start>
+				<atc:altitude>34000</atc:altitude>
+				<atc:velocity>380</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='51.1627'    atc:y='43.7893' />
+					<atc:point atc:x='43.0438'    atc:y='35.3827' />
+					<atc:point atc:x='30.6458'    atc:y='24.2536' />
+					<atc:point atc:x='23.7007'    atc:y='18.0156' />
+					<atc:point atc:x='23.7115'    atc:y='0' />
+				</atc:flightpath>
+			</atc:aircraft>
+
+
+
+			<atc:aircraft atc:idx="C80" atc:type="B747">
+				<atc:start>0</atc:start>
+				<atc:altitude>40000</atc:altitude>
+				<atc:velocity>480</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='52.8476'    atc:y='18.5642' />
+					<atc:point atc:x='70'      	atc:y='18.8871' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+
+
+			<atc:aircraft atc:idx="C27" atc:type="B737">
+				<atc:start>0</atc:start>
+				<atc:altitude>36000</atc:altitude>
+				<atc:velocity>420</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='23.7022' 	atc:y='14.8979'	/>
+					<atc:point atc:x='23.7115' 	atc:y='0'		/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C52" atc:type="A330">
+				<atc:start>0</atc:start>
+				<atc:altitude>31000</atc:altitude>
+				<atc:velocity>470</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='14.3028' 	atc:y='34.8419'	/>
+					<atc:point atc:x='14.3025' 	atc:y='34.8417'	/>
+					<atc:point atc:x='14.3025' 	atc:y='0'		/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C32" atc:type="B744">
+				<atc:start>0</atc:start>
+				<atc:altitude>41000</atc:altitude>
+				<atc:velocity>490</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='14.3027' 	atc:y='14.3884'	/>
+					<atc:point atc:x='14.3025' 	atc:y='0'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>none</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<!--Aircraft entering after start-->
+
+			<atc:aircraft atc:idx="C24" atc:type="A330">
+				<atc:start>25</atc:start>
+				<atc:altitude>34000</atc:altitude>
+				<atc:velocity>430</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='53.3153' 	atc:y='52.5'	/>
+					<atc:point atc:x='51.1627' 	atc:y='43.7893'	/>
+					<atc:point atc:x='43.0438' 	atc:y='35.3827'	/>
+					<atc:point atc:x='23.7007' 	atc:y='18.0156'	/>
+					<atc:point atc:x='23.7115' 	atc:y='0'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C10" atc:type="B747">
+				<atc:start>55</atc:start>
+				<atc:altitude>40000</atc:altitude>
+				<atc:velocity>460</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='50.6008' 	atc:y='0' 	/>
+					<atc:point atc:x='50.5087' 	atc:y='35.5232'	/>
+					<atc:point atc:x='67.2757' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>si</atc:flashItem>
+					<atc:colour>blue</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C3" atc:type="B747">
+				<atc:start>75</atc:start>
+				<atc:altitude>40000</atc:altitude>
+				<atc:velocity>460</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='6.7561'  	atc:y='52.5' 	/>
+					<atc:point atc:x='10.7531' 	atc:y='42.8946'	/>
+					<atc:point atc:x='14.3025' 	atc:y='34.8417'	/>
+					<atc:point atc:x='14.3025' 	atc:y='0'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C39" atc:type="A320">
+				<atc:start>105</atc:start>
+				<atc:altitude>34000</atc:altitude>
+				<atc:velocity>380</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='41.7534' 	atc:y='0'	/>
+					<atc:point atc:x='41.7759' 	atc:y='18.3559'	/>
+					<atc:point atc:x='24.9686' 	atc:y='35.0425'	/>
+					<atc:point atc:x='16.9014' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C45" atc:type="A330">
+				<atc:start>140</atc:start>
+				<atc:altitude>43000</atc:altitude>
+				<atc:velocity>430</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='53.3153' 	atc:y='52.5'	/>
+					<atc:point atc:x='51.1627' 	atc:y='43.7893'	/>
+					<atc:point atc:x='43.0438' 	atc:y='35.3827'	/>
+					<atc:point atc:x='23.7007' 	atc:y='18.0156'	/>
+					<atc:point atc:x='23.7115' 	atc:y='0'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C58" atc:type="B737">
+				<atc:start>185</atc:start>
+				<atc:altitude>35000</atc:altitude>
+				<atc:velocity>420</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='6.7561'  	atc:y='52.5' 	/>
+					<atc:point atc:x='10.7531' 	atc:y='42.8946'	/>
+					<atc:point atc:x='14.3025' 	atc:y='34.8417'	/>
+					<atc:point atc:x='14.3025' 	atc:y='0'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C47" atc:type="B717">
+				<atc:start>185</atc:start>
+				<atc:altitude>34000</atc:altitude>
+				<atc:velocity>410</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='50.6008' 	atc:y='0' 	/>
+					<atc:point atc:x='50.5087' 	atc:y='35.5232'	/>
+					<atc:point atc:x='67.2757' 	atc:y='52.5'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C41" atc:type="B717">
+				<atc:start>185</atc:start>
+				<atc:altitude>32000</atc:altitude>
+				<atc:velocity>390</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='0'       	atc:y='17.5695' />
+					<atc:point atc:x='70'      	atc:y='18.8871' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C16" atc:type="B762">
+				<atc:start>225</atc:start>
+				<atc:altitude>37000</atc:altitude>
+				<atc:velocity>430</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='53.3153' 	atc:y='52.5'	/>
+					<atc:point atc:x='51.1627' 	atc:y='43.7893'	/>
+					<atc:point atc:x='43.0438' 	atc:y='35.3827'	/>
+					<atc:point atc:x='23.7007' 	atc:y='18.0156'	/>
+					<atc:point atc:x='23.7115' 	atc:y='0'	/>
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<atc:aircraft atc:idx="C53" atc:type="B744">
+				<atc:start>220</atc:start>
+				<atc:altitude>30000</atc:altitude>
+				<atc:velocity>490</atc:velocity>
+				<atc:flightpath>
+					<atc:point atc:x='70'      	atc:y='35.8901' />
+					<atc:point atc:x='0'       	atc:y='34.5725' />
+				</atc:flightpath>
+				<atc:acceptedStateFlashParams>
+					<atc:flashItem>fl</atc:flashItem>
+					<atc:colour>red</atc:colour>
+				</atc:acceptedStateFlashParams>
+			</atc:aircraft>
+
+			<!-- ==============Box================ -->
+			<!-- ================================= -->	
+
+			<atc:reminderBox atc:bgColor="LightBlue" atc:width='440' atc:height='105' atc:aircraft='C88' atc:posX='-200' atc:posY='22' atc:displayText="Caution: Altitude changing! /nOnce cruising resolve /nimpending conflict with C98"  atc:displayTextSize='20'>
+				<atc:displayTime atc:startTime='170' atc:endTime='190'/>
+				<atc:flashColor>darkOrange</atc:flashColor>
+				<atc:flashColor>darkOrange</atc:flashColor>
+				<atc:flashTime atc:startTime='0' atc:endTime='0'/>
+				<atc:dismissButton atc:enable_time='174' atc:label="Acknowledge" atc:fontSize='10' atc:width='110' atc:height='30' atc:posX='-40' atc:posY='73'/>
+			</atc:reminderBox>
+
+			<atc:reminderBox atc:bgColor="LightBlue" atc:width='360' atc:height='70' atc:aircraft='C7' atc:posX='-200' atc:posY='50' atc:displayText=" Press Up Arrow Key /n  when handing off C7"  atc:displayTextSize='20'>
+				<atc:displayTime atc:startTime='100' atc:endTime='120'/>
+				<atc:flashColor>darkOrange</atc:flashColor>
+				<atc:flashColor>darkOrange</atc:flashColor>
+				<atc:flashTime atc:startTime='0' atc:endTime='0'/>
+				<atc:dismissButton atc:enable_time='104' atc:label="Acknowledge" atc:fontSize='10' atc:width='110' atc:height='30' atc:posX='-70' atc:posY='70'/>
+			</atc:reminderBox>			
+
+		</atc:sky>
+
+		<!-- ==============Box================ -->
+		<!-- ================================= -->	
+
+		<!-- ===================================================================== -->
+		<!-- =========================== TEST ORDER ============================== -->
+		<!-- ===================================================================== -->
+
+		<atc:ui atc:idx='ui001'>
+
+		</atc:ui>
+
+	</atc:data>
+
+	<atc:presentation>	
+
+		<atc:phase atc:idx='phase-test'>
+			<atc:instruction atc:idxref="Start"/>
+
+			<atc:trial atc:idx='test1' atc:param='default' atc:map="map1" atc:sky="script1" atc:ui="ui001" atc:notify_missed_acceptance='false' atc:notify_missed_handoff='false' atc:disable_callout_rotation='true'>
+				<atc:timeEvent>300</atc:timeEvent>
+				<atc:info_box atc:x='0' atc:y='0' atc:font='Courier New' atc:font_size='50' atc:font_colour='blue' atc:border='true'>Primary Scenario</atc:info_box>
+
+			</atc:trial>
+			<atc:instruction atc:idxref="Rest"/>
+
+			<atc:trial atc:idx='test2' atc:param='default' atc:map="map1" atc:sky="script2" atc:ui="ui001" atc:notify_missed_acceptance='false' atc:notify_missed_handoff='false' atc:disable_callout_rotation='true'>
+				<atc:timeEvent>300</atc:timeEvent>
+				<atc:info_box atc:x='0' atc:y='0' atc:font='Courier New' atc:font_size='50' atc:font_colour='blue' atc:border='true'>Primary Scenario</atc:info_box>
+
+				<atc:interruption atc:start='230' atc:end='257' atc:auto_handoff='true' atc:auto_accept='true' atc:show_blank_screen='true' />
+
+			</atc:trial>
+
+			<atc:instruction atc:idxref="Rest"/>
+
+			<atc:trial atc:idx='test3' atc:param='default' atc:map="map1" atc:sky="script3" atc:ui="ui001" atc:notify_missed_acceptance='false' atc:notify_missed_handoff='false' atc:disable_callout_rotation='true'>
+				<atc:timeEvent>300</atc:timeEvent>
+				<atc:info_box atc:x='0' atc:y='0' atc:font='Courier New' atc:font_size='50' atc:font_colour='blue' atc:border='true'>Primary Scenario</atc:info_box>
+				<atc:interruption atc:start='123' atc:end='150' atc:auto_handoff='true' atc:auto_accept='true' atc:show_blank_screen='true' atc:external_program='"launchtrain.VBS"'>
+					<atc:initial_display atc:symbol='+' atc:font='Courier' atc:font_size='50' atc:font_colour='white' atc:duration_ms='5000' atc:show_timer='false' atc:x='840' atc:y='525'/>
+				</atc:interruption>
+			</atc:trial>
+
+			<atc:instruction atc:idxref="End"/>
+
+		</atc:phase>
+
+	</atc:presentation>
+
+</atc:experiment>
+

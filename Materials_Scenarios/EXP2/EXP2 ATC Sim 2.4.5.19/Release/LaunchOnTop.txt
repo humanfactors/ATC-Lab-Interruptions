@@ -1,0 +1,39 @@
+                      Launch On Top version 1.0
+                          January 12, 2004
+
+                   by Rod Savard, Savard Software
+                    Tri-Cities, Washington, USA
+
+                    feedback@savardsoftware.com
+                       www.savardsoftware.com
+
+
+ABOUT & USAGE
+=============
+
+This tiny program will launch the program specified on its command
+line, wait for the program to load, and then it sets the application
+window to be "always on top." After that, Launch On Top closes so
+that it does not use any system resources.
+
+To use Launch On Top, simply run the executable (LaunchOnTop.exe) with
+the program you wish to execute passed as a command-line parameter.
+For example, if you wanted to run a copy of Notepad in an "always on
+top" sate, you would do this:
+
+  LaunchOnTop notepad.exe
+
+If you need to pass command-line paramters to the program you are
+launching, simply append them like this:
+
+  LaunchOnTop notepad.exe c:\windows\win.ini
+
+That's it!
+
+
+FREEWARE
+========
+
+Launch On Top is distributed as freeware, and the author makes no
+warranties of any kind.  Questions or comments may be directed to
+the above e-mail address.

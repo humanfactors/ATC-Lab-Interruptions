@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-au" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>En Route Air Traffic Control Sim</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.auto-aircraft {
+	color: #008000;
+	font-weight:bold;
+}
+</style>
+</head>
+
+
+
+<body style="margin: 0; background-color: #D3D3D3">
+
+<div class="backgroundmid">
+
+	<h1 class="head1">The Basics</h1>
+	
+	<p class="title">
+	1. The Sector Display</p>
+	<p class="desctext">
+	The light grey polygon in the image below is your flight 
+	control sector. You are responsible for aircraft entering this area, leaving 
+	this area, and flying within this area. The dark grey zone represents areas outside of your control.
+	The black lines are the flight paths which aircraft will travel on. Aircraft 
+	will only travel on these pre-designated paths.</p>
+	<p class="desctext">
+	In the bottom of the screen is a timer. Scenarios go for 5 minutes each. The 
+	number on the right of the screen (currently -10) shows how many points you 
+	have. You are awarded points for successfully completing 
+	objectives, and points are deducted for failing objectives.</p>
+	<p class="figure">
+	<img alt="" height="95%" src="images/sector.png" width="95%" /></p>
+	<p class="title">
+	2. Identifying Aircraft</p>
+	<p class="desctext">
+	The image below shows an example aircraft.
+	Aircraft are represented as coloured circles with a line. The line tells you 
+	what direction the aircraft is travelling in. We will tell you more about colour soon.</p>
+	<p class="desctext">
+	Aircraft have an information box. The first bit of text (from top left) is the 
+	name of the aircraft, e.g. <span class="auto-aircraft">MH22</span>. 
+	Next to this, you have the speed of the aircraft in knots, e.g.
+	<span class="auto-aircraft">45<s>0</s></span>. Under this is the type of aircraft, 
+	e.g. <span class="auto-aircraft">A320</span>.
+	The text at the bottom relates to aircraft altitude and has three parts: 
+	</p>
+	
+		
+		<ul  class="infobullets"><li>The aircraft's current flight level in feet 
+			(ft)</li>
+		<li>An arrow indicating whether the aircraft is descending (<strong class="auto-aircraft">V</strong>), climbing 
+	(<strong class="auto-aircraft">^</strong>), or not changing altitude (<strong class="auto-aircraft">&gt;</strong>).<li>
+			The second number indicates the altitude the aircraft cleared to change to. 
+	</ul>	
+		
+	
+	<p class="figure">
+	Example 2. The 
+	aircraft starts at <span class="auto-aircraft">36,000 ft</span>. Then it starts climbing to 
+	<span class="auto-aircraft">37,00 ft</span>. Note, when the aircraft is not 
+	changing altitude, both numbers are the same and seperated by a (<strong class="auto-aircraft">&gt;</strong>), 
+	whilst when it is changing altitude, the numbers are different and seperated 
+	by a (<strong class="auto-aircraft">^</strong>).</p>
+	<p class="desctext">
+	<img alt="" class="figure" height="280" src="images/infobox.gif" width="456" /></p>
+	<p class="desctext">
+	&nbsp;</p>
+
+
+	<div class="button">
+		<hr style="width: 50%" />	
+			
+			<input class="button" type="button" onclick="location.href='index.html';" value="Go Back" />
+			<input class="button" type="button" onclick="location.href='accept.html';" value="Continue" />
+			
+		<hr style="width: 50%" />
+	</div>
+
+	
+	
+</div>
+</body>
+</html>

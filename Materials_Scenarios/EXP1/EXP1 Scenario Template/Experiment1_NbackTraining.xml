@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!--
+  @file     : Experiment 1 (TRAINING)
+  @project  : ATC Lab Interruptions
+  @author   : Wilson
+  @version  : Michael Wilson 2.4.5.10
+  @modified : 11/02/2015
+
+  @copyright  : 2015 Human Factors & Cognition Lab
+
+  $Id: Experiment 1.xml,v 1.1 2004/11/05 07:37:19 loft Exp $
+-->
+
+<atc:experiment 
+  xmlns:atc="http://www.humanfactors.uq.edu.au/atc/2006/atc-ns" 
+  atc:idx="Experiment1" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.humanfactors.uq.edu.au/atc/2006/atc-ns atc_experiment.xsd">
+
+	<!-- ===================================================================== -->
+	<!-- =============================== Configuration ======================= -->
+	<!-- ===================================================================== -->
+
+	<atc:config>
+
+		<!-- Units -->
+		<atc:units>
+			<atc:input>NM-FT</atc:input>
+		</atc:units>
+
+		<!-- Aircraft -->
+		<atc:aircraftParam atc:idx="B737">
+			<atc:speed>420</atc:speed>
+			<atc:level>370</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="B727">
+			<atc:speed>450</atc:speed>
+			<atc:level>370</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="B767">
+			<atc:speed>450</atc:speed>
+			<atc:level>470</atc:level>
+			<atc:RoC atc:maxLevel="250">1500</atc:RoC>
+			<atc:RoC atc:minLevel="250">500</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="B764">
+			<atc:speed>450</atc:speed>
+			<atc:level>470</atc:level>
+			<atc:RoC atc:maxLevel="250">1500</atc:RoC>
+			<atc:RoC atc:minLevel="250">500</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="B747">
+			<atc:speed>480</atc:speed>
+			<atc:level>430</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="B717">
+			<atc:speed>440</atc:speed>
+			<atc:level>370</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="A300">
+			<atc:speed>490</atc:speed>
+			<atc:level>430</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="A320">
+			<atc:speed>450</atc:speed>
+			<atc:level>390</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="A330">
+			<atc:speed>470</atc:speed>
+			<atc:level>430</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="B762">
+			<atc:speed>210</atc:speed>
+			<atc:level>250</atc:level>
+			<atc:RoC atc:maxLevel="250">2000</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<atc:aircraftParam atc:idx="B744">	
+			<atc:speed>205</atc:speed>
+			<atc:level>240</atc:level>
+			<atc:RoC atc:maxLevel="250">1500</atc:RoC>
+			<atc:RoC atc:minLevel="250">1000</atc:RoC>
+		</atc:aircraftParam>
+
+		<!-- Instruction -->
+		<atc:instruction atc:idx="Rest">
+			<atc:text>
+				<![CDATA[<qt>
+          <center>
+            <table width="60%" bgcolor="darkCyan" border="0" cellspacing="0" cellpadding="50">
+            <tr><td align="left"><font face="verdana" size="1">
+              <p align="center"><font size="+1">Please wait for the next trial to start.</font></p>
+            </font></td></tr>
+            </table>
+          </center>
+        </qt>]]>
+			</atc:text>
+			<atc:timeEvent>1</atc:timeEvent>
+			<atc:showCountdown>true</atc:showCountdown>
+		</atc:instruction>
+
+		<atc:instruction atc:idx="Rest1">
+			<atc:text>
+				<![CDATA[<qt>
+          <center>
+            <table width="60%" bgcolor="darkCyan" border="0" cellspacing="0" cellpadding="50">
+            <tr><td align="left"><font face="verdana" size="1">
+              <p align="center"><font size="+1">Please wait for the next trial to start.</font></p>
+            </font></td></tr>
+            </table>
+          </center>
+        </qt>]]>
+			</atc:text>
+			<atc:timeEvent>1</atc:timeEvent>
+			<atc:showCountdown>true</atc:showCountdown>
+		</atc:instruction>
+
+		<atc:instruction atc:idx="Instructions">
+			<atc:text>
+				<![CDATA[<qt>
+          <center>
+            <table width="80%" bgcolor="darkCyan" border="0" cellspacing="0" cellpadding="50">
+            <tr><td align="left"><font face="verdana" size="1">
+              <p align="center"><font size="+1">You are about to practice a memory task called an n-back task twice. When you see a white cross in the middle of your screen, you will have three seconds until the task begins. Remember to press SPACE BAR when a target item appears. If you press SPACE BAR correctly you will see a green circle. If you press SPACE BAR incorrectly, you will se	e a red square. Be as accurate as possible.</font></p>
+              <p align="center"><font size="+1">When you are ready push G to go forward and have a practice.</font></p></font>
+            </font></td></tr>
+            </table>
+          </center>
+        </qt>]]>
+			</atc:text>
+			<atc:keyEvent>g</atc:keyEvent>
+			
+			
+		</atc:instruction>		<atc:instruction atc:idx="Instructions2">
+			<atc:text>
+				<![CDATA[<qt>
+          <center>
+            <table width="80%" bgcolor="darkCyan" border="0" cellspacing="0" cellpadding="50">
+            <tr><td align="left"><font face="verdana" size="1">
+              <p align="center"><font size="+1">When you are ready, push the G key to do perform your second N-back task training trial.</font></p>
+            </font></td></tr>
+            </table>
+          </center>
+        </qt>]]>
+			</atc:text>
+			<atc:keyEvent>g</atc:keyEvent>
+		</atc:instruction>
+
+		<atc:instruction atc:idx="End">
+			<atc:text>
+				<![CDATA[<qt>
+          <center>
+            <table width="60%" bgcolor="darkCyan" border="0" cellspacing="0" cellpadding="50">
+            <tr><td align="left"><font face="verdana" size="1">
+              <p align="center"><font size="+1">This is the end of the training. If you would like to practice again please let the experimenter know.</font></p>
+              <p align="center"><font color="red"><b>Press the [SPACE] key to continue<b></font></p>
+            </font></td></tr>
+            </table>
+          </center>
+        </qt>]]>
+			</atc:text>
+			<atc:keyEvent>Space</atc:keyEvent>
+		</atc:instruction>
+
+		<atc:instruction atc:idx="Control">
+			<atc:text>
+				<![CDATA[<qt>
+          <center>
+            <table width="60%" bgcolor="darkCyan" border="0" cellspacing="0" cellpadding="50">
+            <tr><td align="left"><font face="verdana" size="1">
+              <p align="center"><font size="+1">Please wait for further instructions before continuing. </font></p>
+              <p align="center"><font color="red"><b>Please wait for further instructions<b></font></p>
+            </font></td></tr>
+            </table>
+          </center>
+        </qt>]]>
+			</atc:text>
+			<atc:keyEvent>Space</atc:keyEvent>
+		</atc:instruction>
+
+		<atc:instruction atc:idx="Motivation1">
+			<atc:text>
+				<![CDATA[<qt>
+          <center>
+            <table width="60%" bgcolor="darkCyan" border="0" cellspacing="0" cellpadding="50">
+            <tr><td align="left"><font face="verdana" size="3"> How anxious were you during the last test trial? 
+Please enter a number between 0 (Not at all) and 10 (Extremely). 
+              <p align="center"><font size="+1"></font></p>
+            </font></td></tr>
+            </table>
+          </center>
+        </qt>]]>
+			</atc:text>
+			<atc:buttonEvent>ok</atc:buttonEvent>
+			<atc:textBox>text</atc:textBox>
+		</atc:instruction>
+
+		<atc:instruction atc:idx="Workload1">
+			<atc:text>
+				<![CDATA[<qt>
+          <center>
+            <table width="60%" bgcolor="darkCyan" border="0" cellspacing="0" cellpadding="50">
+            <tr><td align="left"><font face="verdana" size="3"> How hard were you working during the last test trial? 
+Please enter a number between 0 (Not at all) and 10 (Extremely). 
+              <p align="center"><font size="+1"></font></p>
+            </font></td></tr>
+            </table>
+          </center>
+        </qt>]]>
+			</atc:text>
+			<atc:buttonEvent>ok</atc:buttonEvent>
+			<atc:textBox>text</atc:textBox>
+		</atc:instruction>
+
+		<!-- =============================================================================== -->
+		<!-- ============================== VARIABLES & SETTINGS =========================== -->
+		<!-- =============================================================================== -->
+
+	</atc:config>
+
+	<atc:data>
+
+		<atc:param atc:idx='default'>
+			<atc:sectorEntryDistance>5</atc:sectorEntryDistance>
+			<atc:sectorExitDistance>1</atc:sectorExitDistance>
+			<atc:update_rate>1000</atc:update_rate>
+			<atc:update_multiplier>1</atc:update_multiplier>
+			<atc:horizontal_doms>5</atc:horizontal_doms>
+			<atc:vertical_doms>0</atc:vertical_doms>
+		</atc:param>
+
+		<atc:map atc:idx='map1'>
+			<!--
+      <atc:region atc:x='0' atc:y='0' atc:x_dim='100' atc:y_dim='75' />
+      -->
+			<atc:region atc:x='0' atc:y='0' atc:x_dim='70' atc:y_dim='52.5' />
+
+			<atc:location atc:idx="one"       atc:visible="on" atc:x='16.9014' atc:y='52.5'    />
+			<atc:location atc:idx="two"       atc:visible="off" atc:x='6.7561'  atc:y='52.5'    />
+			<atc:location atc:idx="three"     atc:visible="off" atc:x='67.2757' atc:y='52.5'    />
+			<atc:location atc:idx="four"      atc:visible="off" atc:x='53.3153' atc:y='52.5'    />
+			<atc:location atc:idx="five"      atc:visible="off" atc:x='70'      atc:y='35.8901' />
+			<atc:location atc:idx="six"       atc:visible="off" atc:x='70'      atc:y='18.8871' />
+			<atc:location atc:idx="seven"     atc:visible="off" atc:x='41.7534' atc:y='0'       />
+			<atc:location atc:idx="eight"     atc:visible="off" atc:x='50.6008' atc:y='0'       />
+			<atc:location atc:idx="nine"      atc:visible="off" atc:x='14.3025' atc:y='0'       />
+			<atc:location atc:idx="ten"       atc:visible="off" atc:x='23.7115' atc:y='0'       />
+			<atc:location atc:idx="eleven"    atc:visible="off" atc:x='0'       atc:y='17.5695' />
+			<atc:location atc:idx="twelve"    atc:visible="off" atc:x='0'       atc:y='34.5725' />
+			<atc:location atc:idx="thirteen"  atc:visible="off" atc:x='24.9686' atc:y='35.0425' />
+			<atc:location atc:idx="fourteen"  atc:visible="off" atc:x='43.0438' atc:y='35.3827' />
+			<atc:location atc:idx="fifteen"   atc:visible="off" atc:x='41.7759' atc:y='18.3559' />
+			<atc:location atc:idx="sixteen"   atc:visible="off" atc:x='23.7007' atc:y='18.0156' />
+			<atc:location atc:idx="seventeen" atc:visible="off" atc:x='51.1627' atc:y='43.7893' />
+			<atc:location atc:idx="eighteen"  atc:visible="off" atc:x='50.5087' atc:y='35.5232' />
+			<atc:location atc:idx="nineteen"  atc:visible="off" atc:x='14.3025' atc:y='34.8417' />
+			<atc:location atc:idx="twenty"    atc:visible="off" atc:x='10.7531' atc:y='42.8946' />
+
+			<atc:route atc:idx="routeA">     
+				<atc:pointref atc:location="five"/>
+				<atc:pointref atc:location="twelve"/>
+			</atc:route>
+
+			<atc:route atc:idx="routeB">     
+				<atc:pointref atc:location="eleven"/>
+				<atc:pointref atc:location="six"/>
+			</atc:route>
+
+			<atc:route atc:idx="routeC">     
+				<atc:pointref atc:location="eight"/>    
+				<atc:pointref atc:location="eighteen"/>
+				<atc:pointref atc:location="three"/>
+			</atc:route>
+
+			<atc:route atc:idx="routeD">     
+				<atc:pointref atc:location="two"/>
+				<atc:pointref atc:location="twenty"/>
+				<atc:pointref atc:location="nineteen"/>
+				<atc:pointref atc:location="nine"/>
+			</atc:route>
+
+			<atc:route atc:idx="routeE">     
+				<atc:pointref atc:location="seven"/>
+				<atc:pointref atc:location="fifteen"/>
+				<atc:pointref atc:location="thirteen"/>
+				<atc:pointref atc:location="one"/>
+			</atc:route>
+
+			<atc:route atc:idx="routeF">     
+				<atc:pointref atc:location="four"/>
+				<atc:pointref atc:location="seventeen"/>
+				<atc:pointref atc:location="fourteen"/>
+				<atc:pointref atc:location="sixteen"/>
+				<atc:pointref atc:location="ten"/>
+			</atc:route>
+
+			<atc:route atc:idx="routeG">     
+				<atc:pointref atc:location="two"/>
+				<atc:pointref atc:location="twenty"/>
+				<atc:pointref atc:location="nineteen"/>
+				<atc:pointref atc:location="twelve"/>
+			</atc:route>
+
+			<atc:sector atc:idx="lofty" atc:status="active">
+				<atc:vertex atc:x='10.7531' atc:y='42.8946' />
+				<atc:vertex atc:x='51.1627' atc:y='43.7893' />
+				<atc:vertex atc:x='59.3639' atc:y='33.5005' />
+				<atc:vertex atc:x='58.6183' atc:y='10.8354' />
+				<atc:vertex atc:x='48.7769' atc:y='8.0022'  />
+				<atc:vertex atc:x='13.2881' atc:y='10.8354' />
+			</atc:sector>
+		</atc:map>
+
+		<!-- ===================================================================== -->
+		<!-- =========================== SCRIPTS ================================= -->
+		<!-- ===================================================================== -->
+
+		<atc:sky atc:idx='intro1'> 
+		
+		</atc:sky>
+		
+		<atc:sky atc:idx='intro2'> 
+		
+		</atc:sky>
+
+		<!-- ===================================================================== -->
+		<!-- =========================== TEST ORDER ============================== -->
+		<!-- ===================================================================== -->
+
+		<atc:ui atc:idx='ui001'>
+
+		</atc:ui>
+
+	</atc:data>
+
+	<atc:presentation>	
+
+		<atc:phase atc:idx='phase-test'>
+			<atc:instruction atc:idxref="Instructions"/>
+
+			<atc:trial atc:idx='introt1' atc:param='default' atc:map="map1" atc:sky="intro1" atc:ui="ui001">
+				<atc:timeEvent>40</atc:timeEvent>
+				<atc:nbackTask atc:start='1' atc:end='40' atc:auto_handoff='true' atc:auto_accept='true' atc:background_colour='black' atc:response_key='space' atc:n_factor='2' atc:reptition_probability='40' atc:show_task='true'>
+					<atc:initial_display atc:symbol='+' atc:font='Courier' atc:font_size='50' atc:font_colour='white' atc:duration_ms='3000' atc:show_timer='false' atc:x='840' atc:y='525'/>
+					<atc:stimuli atc:font='SansSerif' atc:font_size='50' atc:font_colour='white' atc:display_duration_ms='2000' atc:show_timer='false' atc:x='840' atc:y='485' />
+					<atc:correct_feedback atc:symbol='circle' atc:colour='green' atc:width='15' atc:height='15' atc:x='854' atc:y='575'/>
+					<atc:incorrect_feedback atc:symbol='square' atc:colour='red' atc:width='15' atc:height='15' atc:x='854' atc:y='575'/>
+					<atc:timer atc:font='SansSerif' atc:font_size='20' atc:font_colour='black' atc:x='465' atc:y='450' />
+				</atc:nbackTask>				
+			</atc:trial>
+			
+			<atc:instruction atc:idxref="Instructions2"/>
+
+			<atc:trial atc:idx='introt2' atc:param='default' atc:map="map1" atc:sky="intro2" atc:ui="ui001">
+				<atc:timeEvent>40</atc:timeEvent>
+				<atc:nbackTask atc:start='1' atc:end='40' atc:auto_handoff='true' atc:auto_accept='true' atc:background_colour='black' atc:response_key='space' atc:n_factor='2' atc:reptition_probability='40' atc:show_task='true'>
+					<atc:initial_display atc:symbol='+' atc:font='Courier' atc:font_size='50' atc:font_colour='white' atc:duration_ms='3000' atc:show_timer='false' atc:x='840' atc:y='525'/>
+					<atc:stimuli atc:font='SansSerif' atc:font_size='50' atc:font_colour='white' atc:display_duration_ms='2000' atc:show_timer='false' atc:x='840' atc:y='485' />
+					<atc:correct_feedback atc:symbol='circle' atc:colour='green' atc:width='15' atc:height='15' atc:x='854' atc:y='575'/>
+					<atc:incorrect_feedback atc:symbol='square' atc:colour='red' atc:width='15' atc:height='15' atc:x='854' atc:y='575'/>
+					<atc:timer atc:font='SansSerif' atc:font_size='20' atc:font_colour='black' atc:x='465' atc:y='450' />
+				</atc:nbackTask>				
+			</atc:trial>
+			
+			<atc:instruction atc:idxref="End"/>
+			
+
+
+
+		</atc:phase>
+
+	</atc:presentation>
+
+</atc:experiment>
+

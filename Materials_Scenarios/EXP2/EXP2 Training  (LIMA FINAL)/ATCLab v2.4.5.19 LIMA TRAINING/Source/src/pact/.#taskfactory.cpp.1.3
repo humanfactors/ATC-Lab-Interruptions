@@ -1,0 +1,181 @@
+/**
+ * @file:       pact_taskfactory.cpp
+ *
+ * 		ATC-Lab Presentation Module
+ *              Creation of presentation tasks.
+ *
+ * @author:     seth  
+ *
+ * @version:    $Name:  $
+ *              File created 00:00:00 PM 10/11/04
+ *
+ * $Id: taskfactory.cpp,v 1.3 2007/07/25 14:44:33 Aaron Yeung Exp $
+ *
+ *              Copyright 2004 ARC Key Centre for 
+ *              Human Factors & Applied Cognitive Psychology
+ */
+
+#include "taskfactory.h"
+
+#include "instructiontask.h"
+#include "questiontask.h"
+#include "trialtask.h"
+#include "engine.h"
+#include "nodehandler.h"
+#include "document.h"			// "xml_document.h"
+
+#ifdef _WIN32
+	#include <assert.h>
+#endif
+
+using namespace pact;
+
+//------------------------------------------------------------------------------
+// [public] interface
+//
+
+/**
+ * Factory Method for creating presentaiton task widgets.
+ * The caller is responsible for heap object.
+ *
+ * @param doc The Document.
+ * @param node Document Node to process.
+ * @return A Task widget.
+ * @throws taskfactory_error if node is not a valid type.
+ *
+ * pre-condition: doc->isValid()
+ * pre-condition: node->isValid()
+ */
+Task* TaskFactory::createTask(
+	const xml::Document* doc,
+	const xml::DocumentNode* node
+){
+	assert( doc );
+	assert( node );
+
+	if ( "instruction" == node->type ) {
+		return TaskFactory::createInstructionTask( doc, node );
+	}
+	else if ( "question" == node->type ) {
+		return TaskFactory::createQuestionTask( doc, node );
+	}
+	else if ( "trial" == node->type ) {
+		return TaskFactory::createTrialTask( doc, node );
+	}
+	else {
+		throw taskfactory_error(
+			std::string( "illegal task entry <" ) + node->type + ">"
+		);
+	}
+};
+
+
+//------------------------------------------------------------------------------
+// [public] Hiden constructors
+//
+
+/**
+ * Build Instruction Presentation Task.
+ *
+ * pre-condition: node->type == "instruction"
+ */
+InstructionTask* TaskFactory::createInstructionTask(
+	const xml::Document* doc,
+	const xml::DocumentNode* node
+){
+	assert("instruction" == node->type);
+	InstructionTask *task = new InstructionTask();
+	doc->process_children(
+		doc->getReferencedNode(doc->getAttributeValue(node, "idxref")), 
+		InstructionNodeHandler(doc, task)
+	);
+
+	return task;
+}
+
+
+/**
+ * Build Question Presentation Task.
+ *
+ * pre-condition: node->type == "question"
+ */
+QuestionTask* TaskFactory::createQuestionTask(
+	const xml::Document* doc,
+	const xml::DocumentNode* node
+){
+	assert("question" == node->type);
+
+	const xml::DocumentNode* qNode = doc->getReferencedNode(
+		doc->getAttributeValue(node, "idxref")
+	);
+
+	QuestionTask *task = new QuestionTask();
+	task->setText(doc->getStringContent(qNode, "text"));
+	task->setScale(
+		doc->getIntegerContent(qNode, "scale min"),
+		doc->getIntegerContent(qNode, "scale max")
+	);
+	return task;
+}
+
+	
+/**
+ * Build ATC Trial Presentation Task.
+ *
+ * pre-condition: node->type == "trial"
+ */
+TrialTask* TaskFactory::createTrialTask (
+		const xml::Document* doc
+	  ,	const xml::DocumentNode* node
+){
+	assert( "trial" == node->type );
+
+	TrialTask *task = new TrialTask();
+
+	if (doc->exists(node, "timeEvent"))
+	{
+		int trial_time = doc->getIntegerContent(node, "timeEvent");
+		task->engine()->TrialTime(trial_time);
+	}
+
+	task->SetTrialName(doc->getAttributeValue(node, "idx"));
+
+	//
+	// Parameters
+	//
+	const xml::DocumentNode* paramNode = doc->getReferencedNode(
+			doc->getAttributeValue( node, "param" )
+	);
+	doc->process_children( paramNode, ParamNodeHandler( doc, task ) );
+
+	//
+	// Map
+	//
+	const xml::DocumentNode* mapNode = doc->getReferencedNode(
+			doc->getAttributeValue( node, "map" )
+	);
+	doc->process_children( mapNode, MapNodeHandler( doc, task ) );
+
+	//
+	// Sky
+	//
+	const xml::DocumentNode* skyNode = doc->getReferencedNode(
+			doc->getAttributeValue( node, "sky" )
+	);
+	doc->process_children( skyNode, SkyNodeHandler( doc, task ) );
+
+	//
+	// UI
+	//
+	if ( doc->attributeExists( node, "ui" ) ) {
+		const xml::DocumentNode* uiNode = doc->getReferencedNode(
+				doc->getAttributeValue( node, "ui" )
+		);
+		doc->process_children( uiNode, UINodeHandler( doc, task ) );
+	}
+
+	task->initialize();
+	return task;
+}
+
+//------------------------------------------------------------------------------

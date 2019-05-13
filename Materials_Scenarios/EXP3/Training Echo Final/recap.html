@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-au" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>En Route Air Traffic Control Sim</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.auto-style1 {
+	color: #F3A000;
+}
+.auto-style2 {
+	color: #144DFF;
+}
+.auto-style3 {
+	border-width: 0px;
+}
+.auto-style9 {
+	border-style: solid;
+	border-width: 1px;
+}
+.auto-style10 {
+	text-align: left;
+	border-style: solid;
+	border-width: 1px;
+}
+.table {
+	text-indent: 15px;
+}
+.auto-style11 {
+	text-align: left;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #99FF66;
+}
+.auto-style12 {
+	text-align: left;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #FF6666;
+}
+</style>
+</head>
+
+
+<body style="margin: 0; background-color: #D3D3D3">
+
+<div class="backgroundmid">
+
+	<h1 class="head1">Recap and Points</h1>
+	
+	<h2 class="title">
+	
+	Recap</h2>
+		
+			<ul class="infobullets">
+				<li>Aircraft enter and exit your sector</li>
+				
+				<li>You accept <span class="auto-style1">orange</span> aircraft 
+				entering by pressing the <img alt="" height="28" align="top" src="images/keyA.png" width="28" class="auto-style3" /> 
+				key.</li>
+				
+				<li>You handoff <span class="auto-style2">blue </span>aircraft 
+				existing by pressing the <img alt="" height="28" align="top" src="images/keyH.png" width="28" class="auto-style3" /> 
+				key.</li>
+				
+				<li>Conflicts occur if aircraft will come within 1000ft of each 
+				other vertically, and 5nm horizontally (yellow marker). You need to prevent conflicts 
+				leading to violations by clicking the altitude indicator and changing the 
+				altitude to a different number.</li>
+			</ul>
+
+		
+	
+	<p class="title">Points</p>
+	<p class="desctext">You are awarded and subtracted points based on your 
+	performance. The experimenter can provide you feedback on your score at the 
+	end of the experiment.</p>
+	<table style="height: 20%;" class="desctext">
+		<tr>
+			<td style="width: 78%; height: 29px;" class="auto-style10">&nbsp; Correctly 
+			performing handoff or accept</td>
+			<td class="auto-style11" style="height: 29px; width: 221px">&nbsp;+10 Points</td>
+		</tr>
+		<tr>
+			<td style="width: 78%; height: 31px;" class="auto-style10">&nbsp; 
+			Detecing a Conflict&nbsp;(<em>reward increases with speed</em>)</td>
+			<td class="auto-style11" style="width: 221px; height: 31px">&nbsp;+10 
+			- 40 
+			Points&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 78%" class="auto-style10">&nbsp; Missing a handoff&nbsp;or 
+			accept</td>
+			<td class="auto-style12" style="width: 221px">&nbsp;- 10 Points&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 78%" class="auto-style9">&nbsp; Letting a conflict turn 
+			into violation (let it turn yellow)&nbsp;</td>
+			<td class="auto-style12" style="width: 221px">&nbsp;- 40 Points&nbsp;</td>
+		</tr>
+				<tr>
+			<td style="width: 78%" class="auto-style9">&nbsp; Changing altitude if 
+			not in conflict or after it has already turned yellow.</td>
+			<td class="auto-style12" style="width: 221px">&nbsp;- 40 Points&nbsp;<br />
+					</td>
+		</tr>
+
+	</table>
+	<p class="desctext""></p>
+	<div class="button">
+		<hr style="width: 50%" />	
+			
+			<input class="button" type="button" onclick="location.href='conflicts.html';" value="Go Back" />
+			<input class="button" type="button" onclick="location.href='final.html';" value="Continue" />
+			
+		<hr style="width: 50%" />
+	</div>
+
+	
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Key Pressed,Time,Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+INTID2,0,1.23769e+015,FH03,accept,0,5,5549.86,A,5,5708.88,5,5709.01,0,0,105,
+INTID2,8,8089.42,KW80,accept,0,9,9734.08,A,9,9868.86,9,9868.98,0,,105,
+INTID2,0,1.23769e+015,UK55,accept,0,4,4245.68,A,4,4412.92,4,4413.04,0,,105,
+
+INTID2,22,22285.7,BW18,handoff,0,23,24054,H,24,24732.7,24,24732.9,0,0,105,
+INTID2,8,8089.37,ER42,handoff,0,10,11086,H,11,11836.9,11,11837,0,,105,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+14,14492.4,XI04,37000,0,
+20,21132.4,FH03,38000,
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+INTID2,NBack,0,2,1,,0,0
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Total Score
+INTID2,105
+Total,105

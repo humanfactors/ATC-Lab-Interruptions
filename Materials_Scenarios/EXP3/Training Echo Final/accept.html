@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-au" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>En Route Air Traffic Control Sim</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.auto-style1 {
+	vertical-align: text-bottom;
+	border-width: 0px;
+}
+.auto-style2 {
+	border-width: 2px;
+	padding-left: 0px;
+}
+.auto-style3 {
+	border-width: 2px;
+}
+</style>
+</head>
+
+
+<body style="margin: 0; background-color: #D3D3D3">
+
+<div class="backgroundmid">
+
+	<h1 class="head1">Accepting and Handing Off</h1>
+	<h2 class="title">
+	1. Accepting Aircraft
+	</h2>
+	
+	<p class="desctext">
+	Aircraft outside your control are black. When they enter within 5 nautical miles of your sector boundary 
+	they will flash orange to be accepted under your control. You accept aircraft into your sector by clicking the 
+	middle of the aircraft circle and then pushing the 
+	<img src="images/keyA.png" class="auto-style1" /> key within 20 seconds. Aircraft will turn green when accepted.</p> 
+	<p class="figure">
+	<img alt="" height="250" src="images/accept.gif"/></p>
+		<h2 class="title">
+	2. Handing off Aircraft
+	</h2><p class="desctext">When aircraft exit more than 1 nautical mile from your sector 
+	they will flash blue to be handed off. You handoff aircraft from your sector by clicking the 
+	middle of the aircraft circle and then pushing the 
+	<img src="images/keyH.png" class="auto-style1" />
+		key within 15 seconds. Aircraft will turn white when handed off.</p> 
+		<p class="figure">
+	<img alt="" height="250" src="images/handoff.gif"/></p>
+
+			<h2 class="title">
+	3. Handoff Deviations</h2>
+	<p class="desctext">
+	Sometimes you will be asked to remember to handoff an aircraft with one of the directional arrows 
+	instead of H. You will recieve this message next to the relevant aircraft ahead of 
+	the time, if you are required to do this. Remember to push the correct arrow 
+	key. See example image below for further reference.</p>
+	<p class="desctext">
+	<strong>It is very important that you push the "Acknowledge" button when one 
+	of these messages appear.</strong> <strong>You have 10 seconds to 
+	Acknowledge a message.</strong></p>
+	<p class="figure">
+	<img alt="" height="250" src="images/handoffmessage.png" width="364" class="auto-style3" /><img class="auto-style2" height="250" src="images/directionalkeys.png" width="364" /></p>
+	
+
+		&nbsp;<div class="button" style="left: 0px; top: -2147483648%">
+		<hr style="width: 50%" />	
+			
+			<input class="button" type="button" onclick="location.href='sector.html';" value="Go Back" />
+			<input class="button" type="button" onclick="location.href='conflicts.html';" value="Continue" />
+			
+		<hr style="width: 50%" />
+	</div>
+
+	
+	
+</div>
+</body>
+</html>

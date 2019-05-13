@@ -1,0 +1,18 @@
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test4,0,1.05824e+015,EG39,accept,0,0,-1,,,,2,0,
+test4,8,7981.83,QD53,accept,0,0,-1,,,,,0,
+
+test4,8,7981.86,WZ33,handoff,0,0,-1,,,,1,0,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+test4,NBack,0,2,1,,0,0
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Total Score
+test4,0
+Total,0
