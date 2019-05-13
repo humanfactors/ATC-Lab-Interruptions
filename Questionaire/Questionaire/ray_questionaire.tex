@@ -1,0 +1,102 @@
+\documentclass[12pt,fleqn]{scrreprt}
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\usepackage[american]{babel}
+\usepackage[top=1.5cm,bottom=2.5cm,left=1.25cm,right=1.25cm]{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage{paperandpencil}
+\usepackage{hanging}
+\usepackage{framed}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\RequirePackage{colortbl}
+
+
+
+
+
+
+
+
+
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\lfoot{\centering Page \thepage\ of \pageref{LastPage}}
+\lhead{}
+\chead{}
+\rhead{}
+\cfoot{}
+\rfoot{}
+
+
+
+
+\begin{document}
+
+
+
+\begin{framed}
+\hspace{75pt}\centering\texttt{Experimenter Use Only}
+		\newline
+		\underline{\texttt{Participant ID:}}\hspace{15pt}\xxxbox \hspace{3cm} \texttt{\underline{Gender:}}\hspace{15pt}\bbox \hspace{3cm}\texttt{\underline{Age:}}\hspace{15pt}\xxbox
+	\end{framed}
+	
+\begin{center}
+	{\vspace{0.1cm}\large \underline{Interruption and Strategy Questionnaire}}
+\end{center}
+The following 11 questions relate to your subjective experience of being interrupted during the experiment. Interruptions were when the primary scenario was replaced temporarily with the additional ATC sector. When answering these questions, think back to your experiences in both the first and second day. All the scales below range from strongly disagree, to strongly agree. Please indicate how much you agree or disagree with each of the following statements by ticking the appropriate box:
+
+%Stress Scale
+\vertikalblockfive{strongly disagree\vspace{0.5cm}}{disagree\vspace{0.5cm}}{neither agree or disagree\vspace{0.5cm}}{agree\vspace{0.5cm}}
+{strongly agree\vspace{0.5	cm}}{
+	\blocktextfive{\noindent\hangpara{.5cm}{1}1.\hspace{0.2cm}I felt stressed and/or anxious during an interruption.}
+	\blocktextfive{\noindent\hangpara{.5cm}{1}2.\hspace{0.2cm}I felt stressed and/or anxious in the time soon \textbf{after} an interruption.}
+	\blocktextfive{\noindent\hangpara{.5cm}{1}3.\hspace{0.2cm}I was irritated, frustrated and/or annoyed by the interruptions.}
+	\blocktextfive{\noindent\hangpara{.5cm}{1}4.\hspace{0.2cm}Being interrupted had no effect on my stress or anxiety.}
+	\blocktextfive{\noindent\hangpara{.5cm}{1}5.\hspace{0.2cm}Being interrupted made it harder to complete tasks on the primary scenario.}
+	\blocktextfive{\noindent\hangpara{.5cm}{1}6.\hspace{0.2cm}I got better at dealing with interruptions over time (i.e. with more experience).}
+	\blocktextfive{\noindent\hangpara{.5cm}{1}7.\hspace{0.2cm}I had to work harder to maintain my level of performance if I was interrupted.}
+	\blocktextfive{\noindent\hangpara{.5cm}{1}8.\hspace{0.2cm}Interruptions made me feel more fatigued, tired and/or exhausted.}
+	\blocktextfive{\noindent\hangpara{.5cm}{1}9.\hspace{0.2cm}Interruptions made remembering task goals more difficult.}
+	\blocktextfive{\noindent\hangpara{.7cm}{1}10.\hspace{0.2cm}I felt the interruptions were boring, irrelevant and/or unimportant.}
+	\blocktextfive{\noindent\hangpara{.7cm}{1}11.\hspace{0.2cm}Being interrupted made me feel confused and/or disorientated.}	
+}
+
+
+%\begin{center}
+%	{\vspace{0.1cm}\large \underline{Performance Scale}}
+%\end{center}
+
+
+
+\newpage
+%\begin{center}
+%	{\vspace{0.5cm}\large \underline{Strategy Scale}}
+%\end{center}
+
+The next 8 questions relate to any strategies or techniques which you may have used to remember task goals (such as the arrow key handoff task). When answering these questions, think back to your experiences in both the first and second day. Answer the open ended questions in the space provided. The scales below range from strongly disagree, to strongly agree. Please indicate how much you agree or disagree with each of the following statements by ticking the appropriate box:
+
+\vertikalblockfive{strongly disagree}{disagree}{neither agree or disagree}{agree}
+{strongly agree}{
+	\blocktextfivetight{\noindent\hangpara{.5cm}{1}1.\hspace{0.2cm}I used rehearsal techniques to accomplish task goals (e.g. repeating objectives or aircraft names in my head).}
+	\blocktextfivetight{\noindent\hangpara{.5cm}{1}2.\hspace{0.2cm}I did not use any special techniques or strategies.}
+	\blocktextfivetight{\noindent\hangpara{.5cm}{1}3.\hspace{0.2cm}I used spatial or visual memory to help me remember important task goals (e.g. remembering the approximate location of an aircraft).}
+	\blocktextfivetight{\noindent\hangpara{.5cm}{1}4.\hspace{0.2cm}I used physical space to help me remember task goals (e.g. putting a finger on the special key or moving hands/feet to serve as reminders).}
+	\blocktextfivetight{\noindent\hangpara{.5cm}{1}5.\hspace{0.2cm}I was more cautious or conservative in my behaviours (e.g. taking more time to respond to an aircraft handoff).}
+	}
+\setcounter{chapter}{5}
+\question{\bf If you used another form of strategy, please specify:}	
+\opendotstwo
+\question{\bf What was the most difficult task for you to do (overall)?}
+\opendotstwo
+\question{\bf What task did you feel was made most difficult by the interruption?}
+\opendotstwo
+
+
+
+\end{document}

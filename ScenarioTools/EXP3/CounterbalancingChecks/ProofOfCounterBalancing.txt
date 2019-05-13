@@ -1,0 +1,105 @@
+####################################################################
+1. CHECK TO SEE IF ALL SCENARIOS HAVE EQUAL NUMBER OF OBSERVATIONS
+Observations across all participants for each scenario number Counter({'11': 16, '10': 16, '13': 16, '12': 16, '15': 16, '14': 16, '16': 16, '1': 16, '3': 16, '2': 16, '5': 16, '4': 16, '7': 16, '6': 16, '9': 16, '8': 16})
+####################################################################
+
+
+
+####################################################################
+2. CHECK TO SEE IF PART. SEES ALL SCENARIOS ONCE EACH DAY
+Participant1On Day 1 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+Participant1On Day 2 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+Participant2On Day 1 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+Participant2On Day 2 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+Participant3On Day 1 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+Participant3On Day 2 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+Participant4On Day 1 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+Participant4On Day 2 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+Participant5On Day 1 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+Participant5On Day 2 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+Participant6On Day 1 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+Participant6On Day 2 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+Participant7On Day 1 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+Participant7On Day 2 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+Participant8On Day 1 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+Participant8On Day 2 count: Counter({'11': 1, '10': 1, '13': 1, '12': 1, '15': 1, '14': 1, '16': 1, '1': 1, '3': 1, '2': 1, '5': 1, '4': 1, '7': 1, '6': 1, '9': 1, '8': 1})
+####################################################################
+
+
+
+####################################################################
+3. CHECK TO SEE IF SCENARIOS ASSOCIATED WITH TIME CONDITIONS EQUALLY
+Counter({'5SL': 4, '12LL': 4, '2LL': 4, '13LL': 4, '13LS': 4, '13SL': 4, '8SS': 4, '6LS': 4, '12LS': 4, '6LL': 4, '4LS': 4, '14LL': 4, '14SS': 4, '5LS': 4, '15SL': 4, '15LS': 4, '3LS': 4, '3LL': 4, '15LL': 4, '15SS': 4, '5LL': 4, '5SS': 4, '14SL': 4, '14LS': 4, '4LL': 4, '2SL': 4, '10LS': 4, '6SS': 4, '12SS': 4, '11SS': 4, '7LS': 4, '1LS': 4, '13SS': 4, '1SL': 4, '1SS': 4, '3SL': 4, '1LL': 4, '16SS': 4, '3SS': 4, '11SL': 4, '12SL': 4, '6SL': 4, '2LS': 4, '2SS': 4, '16LL': 4, '4SL': 4, '8LL': 4, '9LS': 4, '10SL': 4, '10LL': 4, '16SL': 4, '9SL': 4, '7SL': 4, '7SS': 4, '7LL': 4, '8SL': 4, '11LL': 4, '11LS': 4, '9SS': 4, '10SS': 4, '9LL': 4, '8LS': 4, '4SS': 4, '16LS': 4})
+####################################################################
+
+
+
+####################################################################
+4. CHECK TO SEE IF SCENARIOS ASSOCIATED WITH INT CONDITIONS EQUALLY
+Counter({'8ATC': 8, '8None': 8, '4ATC': 8, '4None': 8, '3None': 8, '3ATC': 8, '14ATC': 8, '12None': 8, '11None': 8, '13ATC': 8, '6None': 8, '6ATC': 8, '2ATC': 8, '9ATC': 8, '10ATC': 8, '10None': 8, '1ATC': 8, '7None': 8, '5None': 8, '12ATC': 8, '16ATC': 8, '15None': 8, '13None': 8, '15ATC': 8, '11ATC': 8, '9None': 8, '5ATC': 8, '7ATC': 8, '2None': 8, '1None': 8, '16None': 8, '14None': 8})
+####################################################################
+
+
+
+########################################################################
+5. CHECK TO SEE IF SCENARIOS ASSOCIATED WITH INT+TIME CONDITIONS EQUALLY
+Counter({'4LSNone': 2, '2LLATC': 2, '6LSNone': 2, '12SLNone': 2, '15LLNone': 2, '13SLNone': 2, '10LSATC': 2, '14LLNone': 2, '9LLNone': 2, '14SLATC': 2, '10LLATC': 2, '15SLNone': 2, '2SSATC': 2, '16LSATC': 2, '1LLNone': 2, '15LSNone': 2, '13SSATC': 2, '2SLATC': 2, '8SSATC': 2, '4SSATC': 2, '12SSNone': 2, '11SLATC': 2, '1SSNone': 2, '11SSATC': 2, '3SSATC': 2, '6SSNone': 2, '2LSATC': 2, '14LSATC': 2, '10SSNone': 2, '13LSATC': 2, '5SSNone': 2, '3LLNone': 2, '15SLATC': 2, '8LLATC': 2, '7SSATC': 2, '4LLNone': 2, '16SSNone': 2, '12LSNone': 2, '10SLNone': 2, '7SSNone': 2, '15SSATC': 2, '12LLATC': 2, '6LLNone': 2, '9SSATC': 2, '12LSATC': 2, '4SLATC': 2, '6LSATC': 2, '16LLATC': 2, '9LSNone': 2, '8LLNone': 2, '6SLNone': 2, '8SLATC': 2, '11SSNone': 2, '9LLATC': 2, '9SLNone': 2, '15SSNone': 2, '4LSATC': 2, '14SLNone': 2, '7LLATC': 2, '3SSNone': 2, '3LSNone': 2, '13LLNone': 2, '7SLATC': 2, '16SSATC': 2, '4SLNone': 2, '2LSNone': 2, '5SSATC': 2, '5SLNone': 2, '15LLATC': 2, '7SLNone': 2, '1LSATC': 2, '11LLNone': 2, '6LLATC': 2, '2LLNone': 2, '6SLATC': 2, '8LSNone': 2, '4SSNone': 2, '16SLATC': 2, '5LLNone': 2, '10LLNone': 2, '3SLNone': 2, '7LLNone': 2, '11LSATC': 2, '13LLATC': 2, '5LSNone': 2, '14LLATC': 2, '10SLATC': 2, '15LSATC': 2, '14SSATC': 2, '5LLATC': 2, '1SSATC': 2, '1SLATC': 2, '3LSATC': 2, '11SLNone': 2, '6SSATC': 2, '8SLNone': 2, '2SSNone': 2, '14LSNone': 2, '12LLNone': 2, '3LLATC': 2, '1LLATC': 2, '3SLATC': 2, '5LSATC': 2, '8SSNone': 2, '16LSNone': 2, '16SLNone': 2, '9SSNone': 2, '13SSNone': 2, '7LSNone': 2, '12SLATC': 2, '13SLATC': 2, '7LSATC': 2, '1LSNone': 2, '8LSATC': 2, '12SSATC': 2, '2SLNone': 2, '11LSNone': 2, '4LLATC': 2, '10SSATC': 2, '10LSNone': 2, '13LSNone': 2, '14SSNone': 2, '9LSATC': 2, '16LLNone': 2, '1SLNone': 2, '11LLATC': 2, '5SLATC': 2, '9SLATC': 2})
+####################################################################
+
+
+
+####################################################################
+6. CHECK TO ENSURE ALL CONDITIONS OCCUR AND EQUAL NUMBER OF TIMES
+Counter({'SLATC': 32, 'SLNone': 32, 'LSATC': 32, 'LSNone': 32, 'LLNone': 32, 'SSNone': 32, 'LLATC': 32, 'SSATC': 32})
+####################################################################
+
+
+
+####################################################################
+7. CHECK TO SEE IF PART. SEES ALL ATC INT ONCE EACH DAY and NONE 8x
+Participant1On Day 1 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC4': 1, 'ATC8': 1})
+Participant1On Day 2 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC4': 1, 'ATC8': 1})
+Participant2On Day 1 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC4': 1, 'ATC8': 1})
+Participant2On Day 2 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC4': 1, 'ATC8': 1})
+Participant3On Day 1 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC4': 1, 'ATC8': 1})
+Participant3On Day 2 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC4': 1, 'ATC8': 1})
+Participant4On Day 1 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC4': 1, 'ATC8': 1})
+Participant4On Day 2 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC4': 1, 'ATC8': 1})
+Participant5On Day 1 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC4': 1, 'ATC8': 1})
+Participant5On Day 2 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC4': 1, 'ATC8': 1})
+Participant6On Day 1 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC4': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC8': 1})
+Participant6On Day 2 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC4': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC8': 1})
+Participant7On Day 1 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC4': 1, 'ATC8': 1})
+Participant7On Day 2 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC4': 1, 'ATC8': 1})
+Participant8On Day 1 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC4': 1, 'ATC8': 1})
+Participant8On Day 2 count: Counter({'None': 8, 'ATC6': 1, 'ATC7': 1, 'ATC5': 1, 'ATC2': 1, 'ATC3': 1, 'ATC1': 1, 'ATC4': 1, 'ATC8': 1})
+####################################################################
+
+
+
+####################################################################
+8. CHECK TO SEE IF PART. SEES ALL ATC INT ONCE EACH DAY
+Participant1On Day 1 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+Participant1On Day 2 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+Participant2On Day 1 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+Participant2On Day 2 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+Participant3On Day 1 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+Participant3On Day 2 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+Participant4On Day 1 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+Participant4On Day 2 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+Participant5On Day 1 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+Participant5On Day 2 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+Participant6On Day 1 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+Participant6On Day 2 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+Participant7On Day 1 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+Participant7On Day 2 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+Participant8On Day 1 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+Participant8On Day 2 count: Counter({'SS': 4, 'LL': 4, 'LS': 4, 'SL': 4})
+####################################################################
+
+
+
+####################################################################
+9. CHECK TO SEE WHICH SCENARIOS RANDOMLY MORE ASSOCIATED WITH INT
+[('15ATC1', 4), ('8ATC2', 3), ('11ATC6', 3), ('3ATC1', 3), ('2ATC2', 3), ('6ATC2', 2), ('8ATC4', 2), ('1ATC8', 2), ('1ATC6', 2), ('1ATC4', 2), ('13ATC5', 2), ('15ATC7', 2), ('14ATC6', 2), ('14ATC5', 2), ('14ATC1', 2), ('6ATC3', 2), ('10ATC8', 2), ('4ATC6', 2), ('3ATC7', 2), ('9ATC8', 2), ('13ATC8', 2), ('2ATC7', 2), ('7ATC5', 2), ('7ATC6', 2), ('5ATC4', 2), ('5ATC2', 2), ('12ATC3', 2), ('12ATC7', 2), ('10ATC3', 2), ('6ATC8', 2), ('16ATC5', 2), ('16ATC4', 2), ('16ATC3', 2), ('4ATC7', 1), ('8ATC7', 1), ('8ATC6', 1), ('8ATC5', 1), ('13ATC3', 1), ('1ATC7', 1), ('1ATC5', 1), ('13ATC4', 1), ('11ATC7', 1), ('11ATC5', 1), ('11ATC3', 1), ('11ATC1', 1), ('15ATC2', 1), ('15ATC3', 1), ('11ATC8', 1), ('14ATC7', 1), ('4ATC8', 1), ('10ATC7', 1), ('14ATC2', 1), ('10ATC4', 1), ('4ATC3', 1), ('4ATC2', 1), ('6ATC5', 1), ('4ATC5', 1), ('4ATC4', 1), ('3ATC4', 1), ('3ATC5', 1), ('3ATC8', 1), ('9ATC2', 1), ('9ATC3', 1), ('9ATC1', 1), ('9ATC6', 1), ('13ATC1', 1), ('13ATC2', 1), ('9ATC5', 1), ('9ATC4', 1), ('10ATC2', 1), ('2ATC5', 1), ('2ATC4', 1), ('2ATC3', 1), ('7ATC4', 1), ('7ATC7', 1), ('7ATC3', 1), ('7ATC8', 1), ('5ATC8', 1), ('5ATC6', 1), ('5ATC3', 1), ('5ATC1', 1), ('12ATC8', 1), ('12ATC1', 1), ('12ATC4', 1), ('12ATC6', 1), ('10ATC1', 1), ('6ATC1', 1), ('16ATC7', 1), ('16ATC6', 1)]
+####################################################################

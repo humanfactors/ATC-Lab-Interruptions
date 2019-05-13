@@ -1,0 +1,663 @@
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Key Pressed,Time,Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test1,218,218015,EK30,accept,0,0,-1,,,,,,1,14,-420,
+test1,142,142017,JQ59,accept,1,-1,-1,,,,142,142017,,,-420,
+test1,196,196007,JQ61,accept,0,0,-1,,,,,,1,,-420,
+test1,251,251019,JQ69,accept,0,0,-1,,,,,,1,,-420,
+test1,285,285005,NA72,accept,0,0,-1,,,,,,1,,-420,
+test1,159,159013,NA86,accept,0,0,-1,,,,,,1,,-420,
+test1,0,1.68738e+015,QF19,accept,0,4,4047.08,A,4,4670.76,4,4670.98,0,,-420,
+test1,176,176004,QF23,accept,0,0,-1,,,,,,1,,-420,
+test1,64,63989.6,QF50,accept,0,0,-1,,,,,,1,,-420,
+test1,109,109004,QF62,accept,1,-1,-1,,,,109,109004,1,,-420,
+test1,18,17997.3,QR21,accept,0,0,-1,,,,,,1,,-420,
+test1,251,251019,QR31,accept,0,0,-1,,,,,,1,,-420,
+test1,63,62994.1,SQ48,accept,0,0,-1,,,,,,1,,-420,
+test1,178,178010,SQ80,accept,0,0,-1,,,,,,1,,-420,
+test1,275,275019,TT53,accept,0,0,-1,,,,,,1,,-420,
+
+test1,71,70990.9,BA57,handoff,0,0,-1,,,,,,1,14,-420,
+test1,76,75990.8,BA82,handoff,0,0,-1,,,,,,1,,-420,
+test1,234,234005,EK68,handoff,0,0,-1,,,,,,1,,-420,
+test1,222,222015,GA37,handoff,0,0,-1,,,,,,1,,-420,
+test1,187,187004,LPM,handoff,0,0,-1,,,,,,1,,-420,
+test1,22,22001.9,MH03,handoff,0,0,-1,,,,,,1,,-420,
+test1,43,42989.9,MH63,handoff,0,0,-1,,,,,,1,,-420,
+test1,86,86010.3,MH75,handoff,0,0,-1,,,,,,1,,-420,
+test1,263,263005,QF12,handoff,0,0,-1,,,,,,1,,-420,
+test1,89,89005.1,QR39,handoff,0,0,-1,,,,,,1,,-420,
+test1,102,102005,QR84,handoff,0,0,-1,,,,,,1,,-420,
+test1,147,147018,SPM,handoff,0,0,-1,,,,,,1,,-420,
+test1,204,204004,SQ02,handoff,0,0,-1,,,,,,1,,-420,
+test1,159,159013,TT26,handoff,0,0,-1,,,,,,1,,-420,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test2,56,56013.1,CX12,accept,0,0,-1,,,1,14,-390,
+test2,132,132062,CX80,accept,1,-1,-1,132,132062,1,,-390,
+test2,106,106043,EK09,accept,0,0,-1,,,1,,-390,
+test2,187,187093,EK27,accept,0,0,-1,,,1,,-390,
+test2,284,284120,GA15,accept,0,0,-1,,,1,,-390,
+test2,8,7993.96,GA55,accept,0,0,-1,,,1,,-390,
+test2,232,232092,GA73,accept,0,0,-1,,,1,,-390,
+test2,132,132062,JQ66,accept,1,-1,-1,132,132062,1,,-390,
+test2,231,231091,MH98,accept,0,0,-1,,,1,,-390,
+test2,174,174074,NA39,accept,0,0,-1,,,1,,-390,
+test2,239,239100,QR01,accept,0,0,-1,,,1,,-390,
+test2,24,24012.2,SQ84,accept,0,0,-1,,,1,,-390,
+test2,219,219089,TT43,accept,0,0,-1,,,1,,-390,
+test2,7,6979.08,VA63,accept,0,0,-1,,,1,,-390,
+
+test2,43,43014.1,BA91,handoff,0,0,-1,,,1,14,-390,
+test2,262,262103,BA94,handoff,0,0,-1,,,1,,-390,
+test2,116,116041,EK08,handoff,0,0,-1,,,1,,-390,
+test2,135,135057,EK17,handoff,1,-1,-1,135,135057,1,,-390,
+test2,209,209090,LPM,handoff,0,0,-1,,,1,,-390,
+test2,25,25013.7,NA54,handoff,0,0,-1,,,1,,-390,
+test2,16,15996.7,QF19,handoff,0,0,-1,,,1,,-390,
+test2,236,236101,QF36,handoff,0,0,-1,,,1,,-390,
+test2,169,169082,SPM,handoff,0,0,-1,,,1,,-390,
+test2,262,262103,SQ72,handoff,0,0,-1,,,1,,-390,
+test2,56,56013.1,SQ90,handoff,0,0,-1,,,1,,-390,
+test2,63,63011,TT30,handoff,0,0,-1,,,1,,-390,
+test2,157,157087,TT48,handoff,1,-1,-1,157,157087,,,-390,
+test2,226,226092,TT68,handoff,0,0,-1,,,1,,-390,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test3,65,65035.2,CX98,accept,0,0,-1,,,1,16,-430,
+test3,271,271084,EK09,accept,0,0,-1,,,1,,-430,
+test3,133,133072,GA35,accept,0,0,-1,,,1,,-430,
+test3,286,286092,GA37,accept,0,0,-1,,,,,-430,
+test3,47,47030.1,GA89,accept,0,0,-1,,,1,,-430,
+test3,175,175087,JQ29,accept,0,0,-1,,,1,,-430,
+test3,259,259087,MH50,accept,0,0,-1,,,1,,-430,
+test3,172,172085,MH52,accept,0,0,-1,,,1,,-430,
+test3,3,3001.95,MH85,accept,0,0,-1,,,1,,-430,
+test3,227,227090,QF30,accept,0,0,-1,,,1,,-430,
+test3,35,35020.3,QF63,accept,0,0,-1,,,1,,-430,
+test3,221,221085,QF80,accept,0,0,-1,,,1,,-430,
+test3,123,123079,QR33,accept,0,0,-1,,,1,,-430,
+test3,237,237097,QR64,accept,0,0,-1,,,1,,-430,
+test3,75,75039.6,SPM,accept,0,0,-1,,,1,,-430,
+test3,85,85035.8,SQ72,accept,1,-1,-1,85,85035.8,1,,-430,
+
+test3,106,106051,BA91,handoff,1,-1,-1,106,106051,,13,-430,
+test3,66,66035.8,GA56,handoff,0,0,-1,,,1,,-430,
+test3,11,11004.8,JQ43,handoff,0,0,-1,,,1,,-430,
+test3,163,163083,LPM,handoff,0,0,-1,,,1,,-430,
+test3,25,25021.5,MH74,handoff,0,0,-1,,,1,,-430,
+test3,235,235083,NA24,handoff,0,0,-1,,,1,,-430,
+test3,190,190091,QR22,handoff,0,0,-1,,,1,,-430,
+test3,204,204087,QR25,handoff,0,0,-1,,,1,,-430,
+test3,38,38030.1,TT60,handoff,0,0,-1,,,1,,-430,
+test3,73,73035.6,TT88,handoff,0,0,-1,,,1,,-430,
+test3,181,181083,VA15,handoff,0,0,-1,,,1,,-430,
+test3,229,229096,VA17,handoff,0,0,-1,,,1,,-430,
+test3,228,228091,VA96,handoff,0,0,-1,,,1,,-430,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test4,276,276055,EK10,accept,0,0,-1,,,1,14,-390,
+test4,249,249050,EK21,accept,0,0,-1,,,1,,-390,
+test4,37,36985.7,EK69,accept,0,0,-1,,,1,,-390,
+test4,193,193017,GA37,accept,0,0,-1,,,1,,-390,
+test4,145,144988,JQ24,accept,0,0,-1,,,1,,-390,
+test4,49,48997.4,JQ40,accept,0,0,-1,,,1,,-390,
+test4,65,64996.3,NA55,accept,0,0,-1,,,1,,-390,
+test4,0,330209,QF41,accept,0,0,-1,,,1,,-390,
+test4,290,290076,QF50,accept,0,0,-1,,,,,-390,
+test4,240,240054,QF87,accept,0,0,-1,,,1,,-390,
+test4,166,166001,QR17,accept,0,0,-1,,,1,,-390,
+test4,170,170004,TT38,accept,0,0,-1,,,1,,-390,
+test4,47,46995.7,VA64,accept,0,0,-1,,,1,,-390,
+test4,161,160988,VA89,accept,0,0,-1,,,1,,-390,
+
+test4,105,104985,GA16,handoff,1,-1,-1,105,104985,,11,-390,
+test4,181,181009,GA26,handoff,0,0,-1,,,1,,-390,
+test4,268,268052,GA81,handoff,0,0,-1,,,1,,-390,
+test4,15,14986.4,GA90,handoff,0,0,-1,,,1,,-390,
+test4,163,163002,LPM,handoff,0,0,-1,,,1,,-390,
+test4,76,75984.8,MH79,handoff,0,0,-1,,,1,,-390,
+test4,52,51991.8,QR60,handoff,0,0,-1,,,1,,-390,
+test4,123,122988,SPM,handoff,0,0,-1,,,1,,-390,
+test4,220,220022,SQ22,handoff,0,0,-1,,,1,,-390,
+test4,140,139989,SQ44,handoff,0,0,-1,,,1,,-390,
+test4,168,168004,SQ56,handoff,0,0,-1,,,1,,-390,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test5,188,188113,BA01,accept,0,0,-1,,,1,16,-410,
+test5,17,17005.2,EK96,accept,0,0,-1,,,1,,-410,
+test5,117,117099,GA87,accept,0,0,-1,,,1,,-410,
+test5,276,276156,JQ12,accept,0,0,-1,,,1,,-410,
+test5,256,256118,JQ25,accept,0,0,-1,,,1,,-410,
+test5,47,47035.9,MH37,accept,0,0,-1,,,1,,-410,
+test5,233,233100,NA05,accept,0,0,-1,,,1,,-410,
+test5,99,99088,NA81,accept,0,0,-1,,,1,,-410,
+test5,197,197108,QF03,accept,0,0,-1,,,1,,-410,
+test5,273,273147,QF47,accept,0,0,-1,,,1,,-410,
+test5,265,265147,QF70,accept,0,0,-1,,,1,,-410,
+test5,66,66067.3,QF94,accept,0,0,-1,,,1,,-410,
+test5,0,330165,QR32,accept,0,0,-1,,,1,,-410,
+test5,0,330166,TT92,accept,0,0,-1,,,1,,-410,
+test5,240,240117,VA59,accept,0,0,-1,,,1,,-410,
+test5,219,219099,VA71,accept,0,0,-1,,,1,,-410,
+
+test5,211,211112,BA91,handoff,0,0,-1,,,1,13,-410,
+test5,122,122113,GA21,handoff,0,0,-1,,,1,,-410,
+test5,215,215102,LPM,handoff,0,0,-1,,,1,,-410,
+test5,137,137111,MH50,handoff,1,-1,-1,137,137111,1,,-410,
+test5,201,201103,NA06,handoff,0,0,-1,,,1,,-410,
+test5,35,35050.9,NA78,handoff,0,0,-1,,,1,,-410,
+test5,175,175105,SPM,handoff,0,0,-1,,,1,,-410,
+test5,74,74082.4,SQ38,handoff,0,0,-1,,,1,,-410,
+test5,19,19009.4,SQ48,handoff,0,0,-1,,,1,,-410,
+test5,59,59070.3,TT16,handoff,0,0,-1,,,1,,-410,
+test5,91,91085.6,TT64,handoff,0,0,-1,,,1,,-410,
+test5,199,199099,VA73,handoff,0,0,-1,,,1,,-410,
+test5,75,75069.1,VA75,handoff,0,0,-1,,,1,,-410,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test6,31,31016.4,CX25,accept,0,0,-1,,,1,17,-450,
+test6,194,194077,CX80,accept,0,0,-1,,,1,,-450,
+test6,172,172086,EK37,accept,0,0,-1,,,1,,-450,
+test6,277,277153,EK96,accept,0,0,-1,,,1,,-450,
+test6,81,81048.4,GA85,accept,0,0,-1,,,1,,-450,
+test6,220,220130,GA87,accept,0,0,-1,,,1,,-450,
+test6,0,330262,JQ68,accept,0,0,-1,,,1,,-450,
+test6,25,25015.2,MH44,accept,0,0,-1,,,1,,-450,
+test6,210,210134,NA61,accept,0,0,-1,,,1,,-450,
+test6,100,100083,QF17,accept,1,-1,-1,100,100083,,,-450,
+test6,258,258141,QF88,accept,0,0,-1,,,1,,-450,
+test6,34,34018.8,QR04,accept,0,0,-1,,,1,,-450,
+test6,143,143075,QR58,accept,0,0,-1,,,1,,-450,
+test6,147,147088,QR74,accept,0,0,-1,,,1,,-450,
+test6,180,180085,TT31,accept,0,0,-1,,,1,,-450,
+test6,268,268139,TT34,accept,0,0,-1,,,1,,-450,
+test6,245,245138,TT38,accept,0,0,-1,,,1,,-450,
+
+test6,146,146080,BA01,handoff,0,0,-1,,,1,13,-450,
+test6,201,201078,BA73,handoff,0,0,-1,,,1,,-450,
+test6,210,210134,CX25,handoff,0,0,-1,,,1,,-450,
+test6,44,44014.9,EK29,handoff,0,0,-1,,,1,,-450,
+test6,58,58018.2,EK60,handoff,0,0,-1,,,1,,-450,
+test6,232,232140,EK69,handoff,0,0,-1,,,1,,-450,
+test6,39,39024.6,GA62,handoff,0,0,-1,,,1,,-450,
+test6,268,268139,GA85,handoff,0,0,-1,,,1,,-450,
+test6,36,36021,JQ79,handoff,0,0,-1,,,1,,-450,
+test6,163,163083,LPM,handoff,0,0,-1,,,1,,-450,
+test6,85,85050.3,NA97,handoff,1,-1,-1,85,85050.3,1,,-450,
+test6,55,55014.3,QR45,handoff,0,0,-1,,,1,,-450,
+test6,123,123077,SPM,handoff,0,0,-1,,,1,,-450,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test7,271,271137,EK71,accept,0,0,-1,,,1,16,-450,
+test7,74,73986.6,GA31,accept,0,0,-1,,,1,,-450,
+test7,35,34974.5,JQ38,accept,0,0,-1,,,1,,-450,
+test7,210,210068,MH73,accept,0,0,-1,,,1,,-450,
+test7,100,100025,NA22,accept,0,0,-1,,,1,,-450,
+test7,238,238087,NA55,accept,0,0,-1,,,1,,-450,
+test7,259,259143,QF81,accept,0,0,-1,,,1,,-450,
+test7,106,106023,QF97,accept,0,0,-1,,,1,,-450,
+test7,77,76991.3,QR07,accept,0,0,-1,,,1,,-450,
+test7,169,169054,QR36,accept,0,0,-1,,,1,,-450,
+test7,200,200057,QR48,accept,0,0,-1,,,1,,-450,
+test7,261,261133,SQ16,accept,0,0,-1,,,1,,-450,
+test7,169,169054,TT86,accept,0,0,-1,,,1,,-450,
+test7,249,249117,VA34,accept,0,0,-1,,,1,,-450,
+test7,117,117033,VA57,accept,1,-1,-1,117,117033,1,,-450,
+test7,232,232077,VA87,accept,0,0,-1,,,1,,-450,
+
+test7,261,261133,CX08,handoff,0,0,-1,,,1,13,-450,
+test7,177,177058,CX24,handoff,0,0,-1,,,1,,-450,
+test7,101,101026,EK64,handoff,0,0,-1,,,1,,-450,
+test7,40,39976.9,EK90,handoff,0,0,-1,,,1,,-450,
+test7,262,262138,JQ91,handoff,0,0,-1,,,1,,-450,
+test7,190,190065,LPM,handoff,0,0,-1,,,1,,-450,
+test7,28,27980.1,MH32,handoff,0,0,-1,,,1,,-450,
+test7,10,9978.96,QF56,handoff,0,0,-1,,,1,,-450,
+test7,150,150053,SPM,handoff,0,0,-1,,,1,,-450,
+test7,97,97034.4,SQ20,handoff,0,0,-1,,,1,,-450,
+test7,225,225079,VA17,handoff,0,0,-1,,,1,,-450,
+test7,181,181057,VA28,handoff,0,0,-1,,,1,,-450,
+test7,16,15982.2,VA70,handoff,0,0,-1,,,1,,-450,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test8,56,56003,BA05,accept,0,0,-1,,,1,17,-400,
+test8,136,136064,BA40,accept,0,0,-1,,,1,,-400,
+test8,146,146086,BA78,accept,0,0,-1,,,1,,-400,
+test8,172,172084,CX57,accept,0,0,-1,,,1,,-400,
+test8,241,241081,CX65,accept,0,0,-1,,,1,,-400,
+test8,259,259086,EK17,accept,0,0,-1,,,1,,-400,
+test8,14,13988.5,EK69,accept,0,0,-1,,,1,,-400,
+test8,27,26986.2,GA79,accept,0,0,-1,,,1,,-400,
+test8,0,330281,MH01,accept,0,0,-1,,,1,,-400,
+test8,103,103022,MH81,accept,1,-1,-1,103,103022,,,-400,
+test8,181,181084,NA12,accept,0,0,-1,,,1,,-400,
+test8,1,1000.26,NA97,accept,0,0,-1,,,1,,-400,
+test8,200,200085,QR44,accept,0,0,-1,,,1,,-400,
+test8,282,282113,QR74,accept,0,0,-1,,,1,,-400,
+test8,82,82007.2,SQ34,accept,1,-1,-1,82,82007.2,1,,-400,
+test8,246,246083,SQ39,accept,0,0,-1,,,1,,-400,
+test8,130,130055,VA25,accept,0,0,-1,,,1,,-400,
+
+test8,144,144081,BA14,handoff,0,0,-1,,,1,13,-400,
+test8,28,27986.9,BA23,handoff,0,0,-1,,,1,,-400,
+test8,225,225081,GA55,handoff,0,0,-1,,,1,,-400,
+test8,158,158084,LPM,handoff,0,0,-1,,,1,,-400,
+test8,33,32997.2,MH91,handoff,0,0,-1,,,1,,-400,
+test8,192,192083,NA66,handoff,0,0,-1,,,1,,-400,
+test8,18,17985.9,NA71,handoff,0,0,-1,,,1,,-400,
+test8,293,293125,NA97,handoff,0,0,-1,,,,,-400,
+test8,248,248081,QR52,handoff,0,0,-1,,,1,,-400,
+test8,118,118023,SPM,handoff,0,0,-1,,,1,,-400,
+test8,229,229084,SQ38,handoff,0,0,-1,,,1,,-400,
+test8,197,197082,TT29,handoff,0,0,-1,,,1,,-400,
+test8,34,33988.4,TT83,handoff,0,0,-1,,,1,,-400,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test9,102,102003,BA18,accept,0,0,-1,,,1,17,-420,
+test9,0,330262,BA20,accept,0,0,-1,,,1,,-420,
+test9,3,2979.09,BA47,accept,0,0,-1,,,1,,-420,
+test9,176,176007,CX89,accept,0,0,-1,,,1,,-420,
+test9,100,99993,EK14,accept,0,0,-1,,,1,,-420,
+test9,14,13976.6,EK92,accept,0,0,-1,,,1,,-420,
+test9,254,254040,GA12,accept,0,0,-1,,,1,,-420,
+test9,121,121008,JQ57,accept,1,-1,-1,121,121008,1,,-420,
+test9,224,224048,MH40,accept,0,0,-1,,,1,,-420,
+test9,178,178007,MH56,accept,0,0,-1,,,1,,-420,
+test9,282,282086,NA38,accept,0,0,-1,,,1,,-420,
+test9,30,29980.9,QR01,accept,0,0,-1,,,1,,-420,
+test9,269,269066,QR67,accept,0,0,-1,,,1,,-420,
+test9,235,235040,SQ32,accept,0,0,-1,,,1,,-420,
+test9,171,171020,TT72,accept,0,0,-1,,,1,,-420,
+test9,46,45987.3,VA66,accept,0,0,-1,,,1,,-420,
+test9,181,181019,VA68,accept,0,0,-1,,,1,,-420,
+
+test9,294,294104,BA20,handoff,0,0,-1,,,,15,-420,
+test9,294,294104,BA47,handoff,0,0,-1,,,,,-420,
+test9,37,36976.3,CX05,handoff,0,0,-1,,,1,,-420,
+test9,43,42974.6,GA25,handoff,0,0,-1,,,1,,-420,
+test9,222,222038,JQ93,handoff,0,0,-1,,,1,,-420,
+test9,200,200030,LPM,handoff,0,0,-1,,,1,,-420,
+test9,123,123010,MH15,handoff,1,-1,-1,123,123010,1,,-420,
+test9,116,116020,MH97,handoff,0,0,-1,,,1,,-420,
+test9,210,210042,NA52,handoff,0,0,-1,,,1,,-420,
+test9,160,160011,SPM,handoff,0,0,-1,,,1,,-420,
+test9,229,229047,SQ28,handoff,0,0,-1,,,1,,-420,
+test9,265,265054,TT23,handoff,0,0,-1,,,1,,-420,
+test9,30,29980.9,VA22,handoff,0,0,-1,,,1,,-420,
+test9,173,173010,VA31,handoff,0,0,-1,,,1,,-420,
+test9,25,24976.2,VA48,handoff,0,0,-1,,,1,,-420,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test10,0,330213,CX34,accept,0,0,-1,,,1,15,-360,
+test10,138,138019,EK58,accept,1,-1,-1,138,138019,,,-360,
+test10,37,37011.4,GA24,accept,0,0,-1,,,1,,-360,
+test10,240,240068,GA54,accept,0,0,-1,,,1,,-360,
+test10,168,168034,GA62,accept,0,0,-1,,,1,,-360,
+test10,201,201057,MH35,accept,0,0,-1,,,1,,-360,
+test10,109,109002,NA02,accept,1,-1,-1,109,109002,1,,-360,
+test10,279,279095,NA67,accept,0,0,-1,,,1,,-360,
+test10,167,167036,QF03,accept,0,0,-1,,,1,,-360,
+test10,83,83008,QF45,accept,0,0,-1,,,1,,-360,
+test10,178,178039,QR51,accept,0,0,-1,,,1,,-360,
+test10,22,21991.2,SQ94,accept,0,0,-1,,,1,,-360,
+test10,235,235049,TT12,accept,0,0,-1,,,1,,-360,
+test10,221,221054,VA16,accept,0,0,-1,,,1,,-360,
+test10,246,246075,VA17,accept,0,0,-1,,,1,,-360,
+
+test10,18,17986.3,BA72,handoff,0,0,-1,,,1,14,-360,
+test10,286,286096,CX34,handoff,0,0,-1,,,,,-360,
+test10,105,105002,CX85,handoff,0,0,-1,,,1,,-360,
+test10,265,265079,EK49,handoff,0,0,-1,,,1,,-360,
+test10,190,190040,LPM,handoff,0,0,-1,,,1,,-360,
+test10,140,140017,NA79,handoff,1,-1,-1,140,140017,,,-360,
+test10,279,279095,NA84,handoff,0,0,-1,,,1,,-360,
+test10,96,96003.3,NA98,handoff,0,0,-1,,,1,,-360,
+test10,37,37011.6,QR95,handoff,0,0,-1,,,1,,-360,
+test10,150,150039,SPM,handoff,0,0,-1,,,1,,-360,
+test10,134,134002,SQ11,handoff,1,-1,-1,134,134002,,,-360,
+test10,12,11990.5,SQ88,handoff,0,0,-1,,,1,,-360,
+test10,127,127009,TT14,handoff,1,-1,-1,127,127009,,,-360,
+test10,70,70002.3,VA06,handoff,0,0,-1,,,1,,-360,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test11,57,56991.9,CX07,accept,0,0,-1,,,1,15,-380,
+test11,190,190060,EK34,accept,0,0,-1,,,1,,-380,
+test11,69,68991.3,EK90,accept,0,0,-1,,,1,,-380,
+test11,204,204058,JQ31,accept,0,0,-1,,,1,,-380,
+test11,194,194061,JQ64,accept,0,0,-1,,,1,,-380,
+test11,241,241106,MH49,accept,0,0,-1,,,1,,-380,
+test11,82,82025.2,MH58,accept,0,0,-1,,,1,,-380,
+test11,23,22997.9,NA16,accept,0,0,-1,,,1,,-380,
+test11,222,222077,NA74,accept,0,0,-1,,,1,,-380,
+test11,141,141030,QF02,accept,1,-1,-1,141,141030,1,,-380,
+test11,265,265120,QF06,accept,0,0,-1,,,1,,-380,
+test11,200,200069,QF27,accept,0,0,-1,,,1,,-380,
+test11,1,985.899,QF82,accept,0,0,-1,,,1,,-380,
+test11,146,146038,TT10,accept,1,-1,-1,146,146038,,,-380,
+test11,25,24995.8,TT55,accept,0,0,-1,,,1,,-380,
+
+test11,287,287126,CX30,handoff,0,0,-1,,,,15,-380,
+test11,81,81031,GA33,handoff,0,0,-1,,,1,,-380,
+test11,123,123024,GA65,handoff,0,0,-1,,,1,,-380,
+test11,80,80027,GA66,handoff,0,0,-1,,,1,,-380,
+test11,159,159038,JQ94,handoff,1,-1,-1,159,159038,,,-380,
+test11,211,211059,LPM,handoff,0,0,-1,,,1,,-380,
+test11,8,7997.71,MH54,handoff,0,0,-1,,,1,,-380,
+test11,142,142044,MH96,handoff,1,-1,-1,142,142044,1,,-380,
+test11,274,274121,NA42,handoff,0,0,-1,,,1,,-380,
+test11,33,32997.5,QF59,handoff,0,0,-1,,,1,,-380,
+test11,293,293121,QF82,handoff,0,0,-1,,,,,-380,
+test11,171,171043,SPM,handoff,0,0,-1,,,1,,-380,
+test11,26,25995.8,SQ39,handoff,0,0,-1,,,1,,-380,
+test11,127,127024,TT19,handoff,0,0,-1,,,1,,-380,
+test11,241,241106,VA77,handoff,0,0,-1,,,1,,-380,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test12,264,264131,BA21,accept,0,0,-1,,,1,16,-420,
+test12,85,85072.8,CX76,accept,0,0,-1,,,1,,-420,
+test12,200,200118,CX79,accept,0,0,-1,,,1,,-420,
+test12,0,330252,CX83,accept,0,0,-1,,,1,,-420,
+test12,263,263138,EK31,accept,0,0,-1,,,1,,-420,
+test12,127,127090,EK50,accept,1,-1,-1,127,127090,,,-420,
+test12,134,134089,EK69,accept,1,-1,-1,134,134089,,,-420,
+test12,86,86073,EK91,accept,0,0,-1,,,1,,-420,
+test12,62,62074.4,GA34,accept,0,0,-1,,,1,,-420,
+test12,111,111071,JQ11,accept,1,-1,-1,111,111071,1,,-420,
+test12,255,255133,JQ58,accept,0,0,-1,,,1,,-420,
+test12,138,138101,JQ94,accept,1,-1,-1,138,138101,,,-420,
+test12,46,46068.5,NA02,accept,0,0,-1,,,1,,-420,
+test12,205,205130,SQ84,accept,0,0,-1,,,1,,-420,
+test12,272,272139,TT10,accept,0,0,-1,,,1,,-420,
+test12,11,11022.5,VA23,accept,0,0,-1,,,1,,-420,
+
+test12,108,108071,CX16,handoff,1,-1,-1,108,108071,1,15,-420,
+test12,169,169108,CX60,handoff,0,0,-1,,,1,,-420,
+test12,72,72069.9,EK64,handoff,0,0,-1,,,1,,-420,
+test12,128,128090,EK71,handoff,1,-1,-1,128,128090,,,-420,
+test12,170,170101,GA14,handoff,0,0,-1,,,1,,-420,
+test12,40,40071.7,JQ38,handoff,0,0,-1,,,1,,-420,
+test12,187,187122,LPM,handoff,0,0,-1,,,1,,-420,
+test12,77,77088.4,NA33,handoff,0,0,-1,,,1,,-420,
+test12,184,184127,QF80,handoff,0,0,-1,,,1,,-420,
+test12,147,147105,SPM,handoff,0,0,-1,,,1,,-420,
+test12,60,60070.2,SQ96,handoff,0,0,-1,,,1,,-420,
+test12,108,108071,TT13,handoff,1,-1,-1,108,108071,1,,-420,
+test12,39,39073.3,TT46,handoff,0,0,-1,,,1,,-420,
+test12,243,243134,TT66,handoff,0,0,-1,,,1,,-420,
+test12,297,297149,VA23,handoff,0,0,-1,,,,,-420,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test13,186,186075,BA43,accept,0,0,-1,,,1,15,-390,
+test13,277,277101,BA58,accept,0,0,-1,,,1,,-390,
+test13,153,153073,BA95,accept,0,0,-1,,,1,,-390,
+test13,184,184073,BA96,accept,0,0,-1,,,1,,-390,
+test13,100,100032,CX24,accept,1,-1,-1,100,100032,1,,-390,
+test13,242,242078,CX90,accept,0,0,-1,,,1,,-390,
+test13,151,151062,EK49,accept,0,0,-1,,,1,,-390,
+test13,235,235090,GA25,accept,0,0,-1,,,1,,-390,
+test13,36,36030,GA54,accept,0,0,-1,,,1,,-390,
+test13,269,269077,JQ69,accept,0,0,-1,,,1,,-390,
+test13,0,330250,MH26,accept,0,0,-1,,,1,,-390,
+test13,213,213078,QR13,accept,0,0,-1,,,1,,-390,
+test13,39,39036,QR84,accept,0,0,-1,,,1,,-390,
+test13,80,80035.7,TT35,accept,0,0,-1,,,1,,-390,
+test13,14,14019.3,VA34,accept,0,0,-1,,,1,,-390,
+
+test13,183,183073,CX03,handoff,0,0,-1,,,1,15,-390,
+test13,161,161070,CX74,handoff,0,0,-1,,,1,,-390,
+test13,198,198098,GA97,handoff,0,0,-1,,,1,,-390,
+test13,73,73032.5,JQ60,handoff,0,0,-1,,,1,,-390,
+test13,32,32030.4,JQ62,handoff,0,0,-1,,,1,,-390,
+test13,173,173069,LPM,handoff,0,0,-1,,,1,,-390,
+test13,299,299093,MH26,handoff,0,0,-1,,,,,-390,
+test13,151,151062,NA09,handoff,0,0,-1,,,1,,-390,
+test13,37,37033.1,QF12,handoff,0,0,-1,,,1,,-390,
+test13,12,12017.4,QF20,handoff,0,0,-1,,,1,,-390,
+test13,256,256079,QR88,handoff,0,0,-1,,,1,,-390,
+test13,133,133043,SPM,handoff,0,0,-1,,,1,,-390,
+test13,122,122033,SQ85,handoff,1,-1,-1,122,122033,,,-390,
+test13,25,25021.7,TT56,handoff,0,0,-1,,,1,,-390,
+test13,116,116031,TT94,handoff,1,-1,-1,116,116031,,,-390,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test14,250,250080,BA04,accept,0,0,-1,,,1,16,-450,
+test14,215,215077,GA29,accept,0,0,-1,,,1,,-450,
+test14,43,42988.9,MH44,accept,0,0,-1,,,1,,-450,
+test14,1,985.005,MH89,accept,0,0,-1,,,1,,-450,
+test14,24,23987,MH92,accept,0,0,-1,,,1,,-450,
+test14,213,213092,NA11,accept,0,0,-1,,,1,,-450,
+test14,257,257087,NA49,accept,0,0,-1,,,1,,-450,
+test14,180,180080,QF31,accept,0,0,-1,,,1,,-450,
+test14,242,242077,QF74,accept,0,0,-1,,,1,,-450,
+test14,64,63983.1,QF77,accept,0,0,-1,,,1,,-450,
+test14,158,158079,QR45,accept,0,0,-1,,,1,,-450,
+test14,161,161085,SQ26,accept,0,0,-1,,,1,,-450,
+test14,93,93037,SQ65,accept,0,0,-1,,,1,,-450,
+test14,109,109049,SQ90,accept,1,-1,-1,109,109049,1,,-450,
+test14,67,66999.5,VA46,accept,0,0,-1,,,1,,-450,
+test14,203,203090,VA68,accept,0,0,-1,,,1,,-450,
+
+test14,79,79029.9,CX58,handoff,0,0,-1,,,1,13,-450,
+test14,75,75017.1,GA18,handoff,0,0,-1,,,1,,-450,
+test14,178,178080,LPM,handoff,0,0,-1,,,1,,-450,
+test14,233,233078,MH98,handoff,0,0,-1,,,1,,-450,
+test14,22,21985.5,NA09,handoff,0,0,-1,,,1,,-450,
+test14,108,108052,NA41,handoff,1,-1,-1,108,108052,1,,-450,
+test14,12,11982.7,QF70,handoff,0,0,-1,,,1,,-450,
+test14,210,210083,QR12,handoff,0,0,-1,,,1,,-450,
+test14,138,138067,SPM,handoff,0,0,-1,,,1,,-450,
+test14,277,277089,SQ40,handoff,0,0,-1,,,1,,-450,
+test14,190,190079,SQ47,handoff,0,0,-1,,,1,,-450,
+test14,165,165092,TT57,handoff,0,0,-1,,,1,,-450,
+test14,46,45990.3,VA63,handoff,0,0,-1,,,1,,-450,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test15,260,260212,EK29,accept,0,0,-1,,,1,15,-370,
+test15,15,15034.8,EK39,accept,0,0,-1,,,1,,-370,
+test15,42,42040.6,EK93,accept,0,0,-1,,,1,,-370,
+test15,160,160158,JQ18,accept,1,-1,-1,160,160158,,,-370,
+test15,198,198201,JQ50,accept,0,0,-1,,,1,,-370,
+test15,255,255209,MH23,accept,0,0,-1,,,1,,-370,
+test15,142,142136,QF33,accept,1,-1,-1,142,142136,1,,-370,
+test15,42,42040.6,QF89,accept,0,0,-1,,,1,,-370,
+test15,28,28049.9,QR46,accept,0,0,-1,,,1,,-370,
+test15,227,227217,QR71,accept,0,0,-1,,,1,,-370,
+test15,31,31039.4,SQ32,accept,0,0,-1,,,1,,-370,
+test15,89,89066.1,TT56,accept,0,0,-1,,,1,,-370,
+test15,160,160158,VA13,accept,1,-1,-1,160,160158,,,-370,
+test15,97,97079.9,VA30,accept,0,0,-1,,,1,,-370,
+test15,276,276215,VA83,accept,0,0,-1,,,1,,-370,
+
+test15,199,199195,GA88,handoff,0,0,-1,,,1,14,-370,
+test15,211,211193,LPM,handoff,0,0,-1,,,1,,-370,
+test15,59,59050,MH45,handoff,0,0,-1,,,1,,-370,
+test15,122,122124,NA92,handoff,0,0,-1,,,1,,-370,
+test15,59,59050,QF26,handoff,0,0,-1,,,1,,-370,
+test15,18,18037,QR90,handoff,0,0,-1,,,1,,-370,
+test15,171,171163,SPM,handoff,0,0,-1,,,1,,-370,
+test15,71,71064.5,SQ37,handoff,0,0,-1,,,1,,-370,
+test15,221,221218,SQ77,handoff,0,0,-1,,,1,,-370,
+test15,13,13021.3,SQ94,handoff,0,0,-1,,,1,,-370,
+test15,96,96079,TT01,handoff,0,0,-1,,,1,,-370,
+test15,160,160158,TT51,handoff,1,-1,-1,160,160158,,,-370,
+test15,35,35038.9,VA31,handoff,0,0,-1,,,1,,-370,
+test15,145,145144,VA98,handoff,1,-1,-1,145,145144,,,-370,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Flash Time,Flash Time (HP),Flash CS,Type,Automatic,Selection Time,Selection Time (HP),Acceptance Time,Acceptance Time (HP),Error,Error Total,Score
+test16,248,248131,BA71,accept,0,0,-1,,,1,15,-390,
+test16,43,42978.9,CX11,accept,0,0,-1,,,1,,-390,
+test16,80,80008.3,CX20,accept,0,0,-1,,,1,,-390,
+test16,182,182079,CX68,accept,0,0,-1,,,1,,-390,
+test16,276,276147,CX69,accept,0,0,-1,,,1,,-390,
+test16,206,206089,EK93,accept,0,0,-1,,,1,,-390,
+test16,68,67991.1,MH32,accept,0,0,-1,,,1,,-390,
+test16,63,62991.4,MH65,accept,0,0,-1,,,1,,-390,
+test16,79,79008.4,NA24,accept,0,0,-1,,,1,,-390,
+test16,141,141067,NA60,accept,1,-1,-1,141,141067,,,-390,
+test16,293,293151,NA98,accept,0,0,-1,,,,,-390,
+test16,31,30978,QF75,accept,0,0,-1,,,1,,-390,
+test16,241,241119,QF77,accept,0,0,-1,,,1,,-390,
+test16,137,137069,VA43,accept,1,-1,-1,137,137069,1,,-390,
+test16,210,210086,VA97,accept,0,0,-1,,,1,,-390,
+
+test16,78,78012.7,BA88,handoff,0,0,-1,,,1,15,-390,
+test16,165,165075,CX50,handoff,0,0,-1,,,1,,-390,
+test16,31,30977.9,CX90,handoff,0,0,-1,,,1,,-390,
+test16,284,284148,JQ02,handoff,0,0,-1,,,1,,-390,
+test16,174,174075,JQ13,handoff,0,0,-1,,,1,,-390,
+test16,11,10985.6,JQ54,handoff,0,0,-1,,,1,,-390,
+test16,205,205088,LPM,handoff,0,0,-1,,,1,,-390,
+test16,102,102023,MH22,handoff,0,0,-1,,,1,,-390,
+test16,139,139055,MH74,handoff,1,-1,-1,139,139055,,,-390,
+test16,123,123029,QF96,handoff,0,0,-1,,,1,,-390,
+test16,165,165075,SPM,handoff,0,0,-1,,,1,,-390,
+test16,44,43975.6,SQ01,handoff,0,0,-1,,,1,,-390,
+test16,241,241119,SQ19,handoff,0,0,-1,,,1,,-390,
+test16,108,108025,SQ92,handoff,0,0,-1,,,1,,-390,
+test16,187,187084,VA35,handoff,0,0,-1,,,1,,-390,
+
+Intervene Time,Intervention Time (HP),Intervene CS,Level,Missed
+
+Trial,Callsign,Dismiss Time,Dismiss Time HP
+
+Trial,Interruption Type,Start Time,End Time,Show Full Screen,External Program,Auto Accept,Auto Handoff
+
+Trial,Stimuli Number,Stimuli,Response
+
+Trial,Total Score
+test1,-420
+test2,-390
+test3,-430
+test4,-390
+test5,-410
+test6,-450
+test7,-450
+test8,-400
+test9,-420
+test10,-360
+test11,-380
+test12,-420
+test13,-390
+test14,-450
+test15,-370
+test16,-390
+Total,-6520
